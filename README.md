@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wenima
 
-## Getting Started
+Este proyecto utiliza Next.js (App Router) y sigue las mejores prácticas de arquitectura y organización de carpetas.
 
-First, run the development server:
+## Estructura principal
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+app/
+  components/
+    common/           # Componentes reutilizables (ej: FlipLink)
+    layout/           # Header, Footer, NavBar, CustomCursor
+    participants/     # Participantes y subcomponentes
+    scroll/           # Scroll y subcomponentes
+    text-carousel/    # Carrusel de texto
+  context/            # Contextos globales (ej: CursorContext)
+  lib/                # Utilidades y datos estáticos
+  globals.css         # Estilos globales
+  layout.js           # Layout principal
+  page.js             # Página principal
+  favicon.ico         # Favicon
+public/
+  images/             # Imágenes y assets públicos
+...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- `npm run dev` — Inicia el servidor de desarrollo
+- `npm run build` — Compila el proyecto para producción
+- `npm start` — Inicia el servidor en producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Buenas prácticas
 
-## Learn More
+- Componentes pequeños y reutilizables
+- Lógica separada de presentación (hooks/context)
+- Imágenes en `public/images/`
+- Contextos en `app/context/`
+- Utilidades en `app/lib/`
+- Estilos globales en `globals.css`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+¡Listo para escalar y mantener fácilmente!
