@@ -33,21 +33,20 @@ function InfiniteCarousel({ words, speed = 30, className = "" }) {
     return () => ctx.revert();
   }, [speed]);
 
-  // Duplico las palabras para loop perfecto
   return (
-    <div className={`overflow-hidden w-full h-16 flex items-center ${className}`}>
+    <div className={`overflow-hidden w-full h-8 md:h-16 flex items-center ${className}`}>
       <div
         ref={trackRef}
         className="flex whitespace-nowrap gap-0"
         style={{ willChange: "transform" }}
       >
         {[...words, ...words, ...words].map((word, i) => (
-          <span
-            key={i}
-            className="text-2xl md:text-3xl font-bold text-[#451667]/30 px-2 select-none drop-shadow-sm uppercase"
-          >
-             {word} /
-          </span>
+          <div key={i} className="flex items-center group px-2 select-none">
+            <span className="text-2xl md:text-[40px] font-minima text-[#451667]/80 uppercase transition-colors duration-200 group-hover:text-white/30 group-hover:opacity-90">
+              {word}
+            </span>
+            <span className="text-2xl md:text-[40px] font-bold text-[#451667]/40 ml-1">/</span>
+          </div>
         ))}
       </div>
     </div>
@@ -56,10 +55,10 @@ function InfiniteCarousel({ words, speed = 30, className = "" }) {
 
 export default function TextCarousel() {
   return (
-    <div className="w-full flex flex-col gap-0">
-      <InfiniteCarousel words={WORDS_1} speed={18} className="" />
-      <InfiniteCarousel words={WORDS_2} speed={12} className="" />
-      <InfiniteCarousel words={WORDS_3} speed={24} className="" />
+    <div className="w-full flex flex-col gap-0 py-18">
+      <InfiniteCarousel words={WORDS_1} speed={22} />
+      <InfiniteCarousel words={WORDS_2} speed={20} />
+      <InfiniteCarousel words={WORDS_3} speed={24} />
     </div>
   );
 }

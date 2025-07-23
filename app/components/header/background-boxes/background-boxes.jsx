@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -41,7 +42,7 @@ export const BoxesCore = ({
                 transition: { duration: 0 },
               }}
               key={`col` + j}
-              className="relative h-20 w-40 ">
+              className="relative h-20 w-40  ">
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

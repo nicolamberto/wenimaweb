@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-export const FlipLink = ({ children, href }) => {
+export const FlipLink = ({ children, onClick }) => {
     return (
-        <motion.a
+        <motion.div
             initial="initial"
             whileHover="hovered"
-            href={href}
-            className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
+            onClick={onClick}
+            className="relative block overflow-hidden whitespace-nowrap text-[50px] uppercase sm:text-[80px] md:text-[120px] lg:text-[120px] cursor-pointer"
             style={{
                 lineHeight: 0.85,
             }}
@@ -19,12 +19,8 @@ export const FlipLink = ({ children, href }) => {
                 {children.split("").map((l, i) => (
                     <motion.span
                         variants={{
-                            initial: {
-                                y: 0,
-                            },
-                            hovered: {
-                                y: "-100%",
-                            },
+                            initial: { y: 0 },
+                            hovered: { y: "-100%" },
                         }}
                         transition={{
                             duration: DURATION,
@@ -42,12 +38,8 @@ export const FlipLink = ({ children, href }) => {
                 {children.split("").map((l, i) => (
                     <motion.span
                         variants={{
-                            initial: {
-                                y: "100%",
-                            },
-                            hovered: {
-                                y: 0,
-                            },
+                            initial: { y: "100%" },
+                            hovered: { y: 0 },
                         }}
                         transition={{
                             duration: DURATION,
@@ -61,6 +53,7 @@ export const FlipLink = ({ children, href }) => {
                     </motion.span>
                 ))}
             </div>
-        </motion.a>
+        </motion.div>
     );
 };
+

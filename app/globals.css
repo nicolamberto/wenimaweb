@@ -1,5 +1,45 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'font-minima';
+  src: url('/fonts/MinimaExpandedSSiBoldExpanded.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-minima {
+  font-family: 'font-minima', sans-serif;
+}
+
+@font-face {
+  font-family: 'font-poppins-el';
+  src: url('/fonts/Poppins-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'font-poppins-eli';
+  src: url('/fonts/Poppins-ExtraLightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-poppins-eli {
+  font-family: 'font-poppins-eli', sans-serif;
+}
+
+@font-face {
+  font-family: 'font-popppins-mi';
+  src: url('/fonts/Poppins-MediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-poppins-mi {
+  font-family: 'font-poppins-mi', sans-serif;
+}
+
 html.lenis {
   height: auto;
 }
@@ -10,4 +50,5 @@ html.lenis {
 
 body{
   background-color: #000000;
+  font-family: 'font-poppins-el', sans-serif;
 }
