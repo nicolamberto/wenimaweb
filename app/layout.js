@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="lenis">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
+      <body className={`antialiased overflow-x-hidden`}>
         <CursorProvider>
           <CustomCursor />
           {children}

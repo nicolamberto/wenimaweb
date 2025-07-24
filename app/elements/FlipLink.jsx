@@ -4,7 +4,9 @@ import { motion } from 'framer-motion';
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
+
 export const FlipLink = ({ children, onClick }) => {
+    
     return (
         <motion.div
             initial="initial"
