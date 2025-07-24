@@ -104,7 +104,7 @@ export default function Participants() {
                                     className="h-full w-auto object-cover"
                                 />
                             </div>
-                            <div className=" flex flex-col justify-between pl-5 py-3 sm:py-6 uppercase border-2">
+                            <div className=" flex flex-col justify-between pl-5 py-3 sm:py-6 uppercase">
                                 <p className=' font-semibold text-black/90 text-[21px] sm:text-[35px] md:text-[45px] -tracking-[1px]'>{participant.name}</p>
                                 <p className='font-light text-black/60 text-[13px] sm:text-[18px]'>{participant.role}</p>
                             </div>
