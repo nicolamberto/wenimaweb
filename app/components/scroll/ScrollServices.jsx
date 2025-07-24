@@ -62,8 +62,8 @@ export const ScrollServices = () => {
 
 const Card = ({ card }) => {
   return (
-    <div className="group relative h-[74vh] w-[100vw] mx-0 md:w-[650px] lg:w-[750px] shrink-0 overflow-hidden flex flex-col justify-between border border-white/10 bg-[#451667]/40">
-      <div className="flex-1 flex flex-col items-start justify-start px-10 pt-20  gap-10 relative">
+    <div className="group relative h-[80vh] w-[100vw] mx-0 md:w-[650px] lg:w-[750px] shrink-0 overflow-hidden flex flex-col justify-between border border-white/10 bg-[#451667]/40">
+      <div className="flex-1 flex flex-col items-start justify-start px-10 pt-10 md:pt-20 gap-10 relative">
         <h3 className="text-[29px] sm:text-[45px] font-minima font-bold text-white/90 leading-tight uppercase">
           {card.title}
         </h3>
