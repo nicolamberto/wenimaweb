@@ -30,7 +30,7 @@ export default function Header() {
                 <p className='text-start'>CREATIVO.</p>
             </div>
 
-            <div className=" flex-col hidden lg:absolute lg:block right-3 md:right-20 pointer-events-none">
+            <div className=" flex-col hidden 2xl:absolute lg:block right-3 md:right-20 pointer-events-none">
                 <div className="pointer-events-none 2xl:pt-[200px] text-[#f1eaf0]/60 max-w-[400px] text-justify leading-6">
                     <p className=' text-justify'>
                     Potenciamos marcas con diseño y tecnología. Creamos sitios web modernos y funcionales, desarrollamos identidades visuales sólidas y te acompañamos a construir una presencia digital que te diferencie y genere resultados reales.
