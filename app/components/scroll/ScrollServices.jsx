@@ -45,22 +45,37 @@ export const ScrollServices = () => {
 
       {/* MOBILE SCROLL NATIVO */}
       {isMobile ? (
-        <section id="servicios" className="w-full overflow-x-auto snap-x snap-mandatory flex gap-4 px-4 py-10">
-          {services.map((card, i) => (
-            <div key={i} className="snap-center shrink-0 w-[85vw] h-[400px] bg-[#451667]/40 border border-white/10 p-6 flex flex-col justify-between">
-              <h3 className="text-[24px] font-minima font-bold text-white/90 uppercase">{card.title}</h3>
-              <ul className="space-y-2 mt-4">
-                {card.features.map((feature, idx) => (
-                  <li key={idx} className="text-white/60 text-sm pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-[#f1eaf0] before:pr-2">
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <button className="mt-6 bg-[#f1eaf0] text-[#451667] px-3 py-1 rounded-full font-minima font-bold text-sm shadow">
-                Contacta!
-              </button>
-            </div>
-          ))}
+        <section 
+          id="servicios" 
+          className="w-full overflow-x-scroll no-scrollbar py-10"
+          style={{
+            WebkitOverflowScrolling: 'touch',
+          }}
+        >
+          <div className="inline-flex gap-4 px-4 pb-4">
+            {services.map((card, i) => (
+              <div 
+                key={i} 
+                className="flex-none w-[92vw] h-[400px] bg-[#451667]/40 border border-white/10 p-6 flex flex-col justify-between"
+                style={{
+                  willChange: 'transform',
+                  transform: 'translateZ(0)'
+                }}
+              >
+                <h3 className="text-[24px] font-minima font-bold text-white/90 uppercase">{card.title}</h3>
+                <ul className="space-y-2 mt-4">
+                  {card.features.map((feature, idx) => (
+                    <li key={idx} className="text-white/60 text-sm pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-[#f1eaf0] before:pr-2">
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <button className="mt-6 bg-[#f1eaf0] text-[#451667] px-3 py-1 rounded-full font-minima font-bold text-sm shadow">
+                  Contacta!
+                </button>
+              </div>
+            ))}
+          </div>
         </section>
       ) : (
         // DESKTOP SCROLL CONTROLADO POR FRAMER MOTION
