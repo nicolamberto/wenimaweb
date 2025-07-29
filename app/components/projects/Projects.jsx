@@ -8,8 +8,8 @@ import { SectionTitle } from "@/app/elements/SectionTitle";
 
 export const Projects = () => {
     return (
-        <div className=" w-full">
-            <SectionTitle leftText="NUESTROS" rightText="PROYECTOS" className="py-20" />
+        <div className=" w-full ">
+            <SectionTitle leftText="NUESTROS" rightText="PROYECTOS" className="py-20 pt-[100px] md:pt-[200px] bg-[#0b153a] text-[#f1eaf0]" />
             {
                 projects.map((project, index) => (
                     <TextParallaxContent
@@ -18,7 +18,7 @@ export const Projects = () => {
                         subheading={project.techs}
                         heading={project.name}
                     >
-                        <ExampleContent title={project.description} description={project.longdescription} />
+                        <ProjectDescription title={project.description} description={project.longdescription} />
                     </TextParallaxContent>
                 ))
             }
@@ -96,25 +96,25 @@ const OverlayCopy = ({ subheading, heading }) => {
                 opacity,
             }}
             ref={targetRef}
-            className="absolute left-0 top-0 flex h-screen w-full flex-col-reverse items-center justify-center text-white gap-10"
+            className="absolute left-0 top-0 flex h-screen w-full flex-col-reverse items-center justify-center text-white gap-2 md:gap-10"
         >
             <div className="flex flex-row flex-wrap gap-3 sm:gap-8 md:gap-10 justify-center items-center">
-                            {
-                subheading.map((tech, index) => (
-                    <p key={index} className="mb-2 text-center text-[11px] md:mb-4 md:text-[20px] text-white/70 font-poppins-eli">
-                        {tech}
-                    </p>
-                ))
-            }
+                {
+                    subheading.map((tech, index) => (
+                        <p key={index} className="mb-2 text-center text-[11px] md:mb-4 md:text-[20px] text-white/70 font-poppins-eli">
+                            {tech}
+                        </p>
+                    ))
+                }
             </div>
 
-            
-            <p className="text-center text-4xl font-bold md:text-7xl uppercase font-minima">{heading}</p>
+
+            <p className="text-center text-[43px] font-bold md:text-[50px] uppercase font-minima leading-10">{heading}</p>
         </motion.div>
     );
 };
 
-const ExampleContent = ({ title, description }) => (
+const ProjectDescription = ({ title, description }) => (
     <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-4 pb-24 pt-12 mb-12 md:grid-cols-12 relative">
         <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-[#451667]">
             {title}
