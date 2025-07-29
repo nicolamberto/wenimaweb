@@ -9,15 +9,17 @@ import { Projects } from "./components/projects/Projects";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-start items-center pb-40 relative z-20 bg-[#f1eaf0] bg-[url('/images/bg/bgrugoso.png')] bg-repeat">
+    <div className="flex flex-col justify-start items-center pb-40 relative z-10 ">
       <NavBar />
       <Header />
-      <Participants />
-      <div className="w-full bg-[#0b153a]">
-        <TextCarousel />
-        <ScrollServices />
+      <div className="bg-[#f1eaf0] bg-[url('/images/bg/bgrugoso.png')] bg-repeat w-full h-full z-0">
+        <Participants />
+        <div className="w-full bg-[#0b153a]">
+          <TextCarousel />
+          <ScrollServices />
+        </div>
+        <Projects />
       </div>
-      <Projects />
     </div>
   );
 }

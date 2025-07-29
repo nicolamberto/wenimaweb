@@ -4,19 +4,11 @@ import Image from 'next/image';
 
 export default function Header() {
 
-    const text = "Tu idea, con forma y alma.";
+    const text = "Tu idea, con forma y alma.";  
     const words = text.replace(/[.,]/g, '').split(' ');
 
     return (
-        <div className='h-[100vh] w-full relative overflow-hidden'>
-
-            <Image
-                width={200}
-                height={200}
-                src="/images/banner/banner1nima.jpg"
-                alt="Background Image"
-                className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80"
-            />
+        <div className='h-[100vh] w-full relative overflow-hidden z-30 bg-[#0b153a]'>
 
             {/* boxes */}
             <div className="absolute inset-0 z-0 pointer-events-auto hidden md:block">
