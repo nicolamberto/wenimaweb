@@ -1,6 +1,5 @@
 import Image from "next/image";
 import NavBar from "./components/navbar/NavBar";
-import Scroll from "./components/scroll/Scroll";
 import Participants from "./components/participants/Participants";
 import Header from "./components/header/Header";
 import TextCarousel from "./components/text-carousel/TextCarousel";

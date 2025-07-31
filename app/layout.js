@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="lenis">
-      <body className={`antialiased overflow-x-hidden`}>
+      <body className={`antialiased overflow-x-hidden pb-[100vh]`}>
         <CursorProvider>
           <CustomCursor />
           {children}

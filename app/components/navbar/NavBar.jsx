@@ -14,7 +14,7 @@ export default function NavBar() {
             <Image src={'/images/logos/logocompleto.png'} alt='logo' width={200} height={200} />
             <div className="">
                 <motion.button 
-                onClick={() => setIsVisible(!isVisible)} className='py-2 px-5 bg-[#f1eaf0] text-[#451667] rounded-full cursor-pointer'
+                onClick={() => setIsVisible(!isVisible)} className='py-2 px-5 bg-[#e6e6e6] text-[#080a00] rounded-full cursor-pointer'
                 whileHover={{scale:1.06}}
                 whileTap={{scale:0.9}}
                 >
