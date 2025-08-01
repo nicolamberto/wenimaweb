@@ -20,7 +20,7 @@ export default function TextHeader({ subheading, heading }) {
                 opacity,
             }}
             ref={targetRef}
-            className="absolute left-0 top-0 flex h-screen w-full flex-col-reverse items-center justify-center text-white gap-2 md:gap-4"
+            className="absolute left-0 top-0 flex h-screen w-full flex-col-reverse items-center justify-center text-white gap-3 md:gap-4 2xl:gap-7"
         >
             <div className="flex flex-row flex-wrap gap-3 sm:gap-8 md:gap-7 justify-center items-center">
                 {
@@ -33,7 +33,7 @@ export default function TextHeader({ subheading, heading }) {
             </div>
 
 
-            <p className="text-center text-[43px] font-bold md:text-[50px] uppercase font-minima leading-10">{heading}</p>
+            <p className="text-center w-full relative text-[clamp(70px,30vw,50px)] md:text-[50px] 2xl:text-[100px] uppercase font-minima leading-10">{heading}</p>
         </motion.div>
     );
 }

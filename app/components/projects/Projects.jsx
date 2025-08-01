@@ -10,7 +10,7 @@ export const Projects = () => {
 
     return (
         <div className=" w-full ">
-            <SectionTitle leftText="NUESTROS" rightText="PROYECTOS" className="py-20 pt-[100px] md:pt-[200px] bg-[#0b153a] text-[#f1eaf0]" />
+            <SectionTitle leftText="NUESTROS" rightText="PROYECTOS" className="py-20 pt-[100px] md:pt-[200px] text-[#080a00]" />
             {
                 projects.map((project, index) => (
                     <ImageSection
@@ -19,7 +19,7 @@ export const Projects = () => {
                         subheading={project.techs}
                         heading={project.name}
                     >
-                        <ProjectDescription title={project.description} description={project.longdescription} />
+                        <ProjectDescription title={project.description} description={project.longdescription} name={project.name} />
                     </ImageSection>
                 ))
             }

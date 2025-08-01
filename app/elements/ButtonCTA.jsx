@@ -4,13 +4,13 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FaArrowRight } from "react-icons/fa6";
 
-export default function ButtonCTA({ text }) {
+export default function ButtonCTA({ text, className='' }) {
 
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <motion.button
-            className="group rounded-full bg-[#d6ff00] py-4 uppercase font-minima text-[12px] md:text-[20px] text-[#080a00] overflow-hidden absolute bottom-0 right-4 cursor-pointer"
+            className={`group rounded-full bg-[#d6ff00] py-2 uppercase font-minima text-[12px] md:text-[20px] text-[#080a00] cursor-pointer overflow-hidden ${className}    `}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
         >
@@ -22,7 +22,7 @@ export default function ButtonCTA({ text }) {
                         animate={{ y: '0%' }}
                         exit={{ y: '-100%' }}
                         transition={{ duration: 0.2, ease: 'easeInOut', delay: 0.1 }}
-                        className="absolute inset-0 bg-[#333333] z-0"
+                        className="absolute inset-0 bg-[#333333] z-0 w-[400px] h-full -left-1"
                     />
                 )}
             </AnimatePresence>

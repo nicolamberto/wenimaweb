@@ -1,3 +1,4 @@
+import ButtonCTA from '@/app/elements/ButtonCTA'
 import Image from 'next/image'
 import React from 'react'
 
@@ -5,7 +6,7 @@ export default function CardMobile({ card, i }) {
     return (
         <div
             key={i}
-            className="flex-none w-[92vw] h-[520px] bg-[#451667]/40 border border-white/10 p-6 flex flex-col justify-between"
+            className="flex-none w-[92vw] h-[520px] border border-[#d6ff00]/20 bg-[#333333]/50 p-6 flex flex-col justify-between"
             style={{
                 willChange: 'transform',
                 transform: 'translateZ(0)'
@@ -23,8 +24,6 @@ export default function CardMobile({ card, i }) {
                     </li>
                 ))}
             </ul>
-            <button className="mt-6 bg-[#f1eaf0] text-[#451667] px-3 py-1 rounded-full font-minima font-bold text-sm shadow">
-                Contacta!
-            </button>
+            <ButtonCTA text={'CONTACTAR'} className=' w-[60%]'/>
         </div>)
 }

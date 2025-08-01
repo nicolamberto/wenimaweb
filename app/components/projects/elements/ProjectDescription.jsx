@@ -1,18 +1,22 @@
-import React from 'react'
-import ButtonCTA from '../../../elements/ButtonCTA'
+import React from 'react';
+import ButtonCTA from '../../../elements/ButtonCTA';
 
-export default function ProjectDescription({ title, description }) {
+export default function ProjectDescription({ title, description, name }) {
     return (
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-4 pb-24 pt-12 mb-12 md:grid-cols-12 relative">
-            <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-[#451667]">
-                {title}
-            </h2>
-            <div className="col-span-1 md:col-span-8">
-                <p className="mb-4 text-xl md:text-2xl text-justify text-[#451667]/70">
+        <div className="mx-auto max-w-full px-5 md:px-16 lg:px-20 pb-24 2xl:pb-32 pt-5 lg:pt-20 mb-12 relative">
+            <div className="flex flex-col 2xl:flex-row justify-between gap-6">
+                <div className="flex flex-col gap-2 lg:gap-5 2xl:max-w-[600px]">
+                    <h2 className="text-[25px] md:text-[30px] lg:text-[40px] font-bold text-[#080a00] font-minima leading-7 md:leading-8 2xl:leading-13">
+                        {title}
+                    </h2>
+                    <p className='text-[#080a00]/70 text-[20px] lg:text-[30px] font-minima'>- {name}</p>
+                </div>
+
+                <p className="text-[18px] md:text-[23px] text-justify text-[#080a00]/70 2xl:max-w-[850px]">
                     {description}
                 </p>
             </div>
-            <ButtonCTA text="Quiero algo así" />
+            <ButtonCTA text="Quiero algo así" className='absolute bottom-0 2xl:right-20 2xl:py-4' />
         </div>
-    )
+    );
 }

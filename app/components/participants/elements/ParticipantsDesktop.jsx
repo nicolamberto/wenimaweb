@@ -9,12 +9,13 @@ export default function ParticipantsDesktop({ participantes }) {
 
 
     return (
-        <div className="hidden xl:flex flex-row justify-between w-full relative">
+        <div className="hidden xl:flex flex-row justify-between w-full relative z-20">
             <div className="flex flex-col gap-0 w-full">
                 {
                     participantes.map((participant, index) => (
 
                         <div
+                            key={index}
                             onMouseEnter={() => setHoverParticipant(participant)}
                             onMouseLeave={() => setHoverParticipant(false)}
                             className="flex flex-row justify-between items-center pl-10 relative leading-16 2xl:leading-20 z-10">
@@ -23,7 +24,7 @@ export default function ParticipantsDesktop({ participantes }) {
                                 <motion.p
                                     animate={{ x: hoverParticipant && hoverParticipant.name === participant.name ? 50 : 0 }}
                                     transition={{ type: 'tween', duration: 0.25, ease: 'easeOut' }}
-                                    className={`text-[50px] 2xl:text-[70px] font-minima tracking-tighter ${hoverParticipant.name === participant.name ? 'text-[#451667]/80' : 'text-black/20'} cursor-pointer`}
+                                    className={`text-[50px] 2xl:text-[70px] font-minima tracking-tighter ${hoverParticipant.name === participant.name ? 'text-[#333333]' : 'text-[#b5b5b5]'} cursor-pointer`}
                                 >{participant.name}
                                 </motion.p>
                             </div>

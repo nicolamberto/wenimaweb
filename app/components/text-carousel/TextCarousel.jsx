@@ -42,10 +42,10 @@ function InfiniteCarousel({ words, speed = 30, className = "" }) {
       >
         {[...words, ...words, ...words].map((word, i) => (
           <div key={i} className="flex items-center group px-2 select-none">
-            <span className="text-2xl md:text-[40px] font-minima text-[#451667]/80 uppercase transition-colors duration-200 group-hover:text-white/30 group-hover:opacity-90">
+            <span className="text-2xl md:text-[40px] font-minima text-[#b5b5b5]/20 uppercase transition-colors duration-200 group-hover:text-[#d6ff00]/50 group-hover:opacity-90">
               {word}
             </span>
-            <span className="text-2xl md:text-[40px] font-bold text-[#451667]/40 ml-1">/</span>
+            <span className="text-2xl md:text-[40px] font-bold text-[#b5b5b5]/10 ml-1">/</span>
           </div>
         ))}
       </div>

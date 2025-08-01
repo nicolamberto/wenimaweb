@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <div className="bg-[#f1eaf0] bg-[url('/images/bg/bgrugoso.png')] bg-repeat w-full h-full z-0">
         <Participants />
-        <div className="w-full bg-[#0b153a]">
+        <div className="w-full bg-[#080a00]">
           <TextCarousel />
           <ScrollServices />
         </div>
