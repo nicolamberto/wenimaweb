@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import TextCarousel from "./components/text-carousel/TextCarousel";
 import { ScrollServices } from "./components/scroll/ScrollServices";
 import { Projects } from "./components/projects/Projects";
+import Contact from "./components/contact/Contact";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <ScrollServices />
         </div>
         <Projects />
+        <Contact />
       </div>
     </div>
   );

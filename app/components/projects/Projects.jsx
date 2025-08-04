@@ -5,13 +5,16 @@ import { SectionTitle } from "@/app/elements/SectionTitle";
 import ImageSection from "./elements/ImageSection";
 import ProjectDescription from "./elements/ProjectDescription";
 
-
 export const Projects = () => {
 
     return (
         <div className=" w-full ">
-            <SectionTitle leftText="NUESTROS" rightText="PROYECTOS" className="py-20 pt-[100px] md:pt-[200px] text-[#080a00]" />
-            {
+            <div
+                className={`font-minima leading-9 sm:leading-16 w-full flex flex-col xl:flex-row justify-between text-[#333333] text-[40px] sm:text-[70px] lg:text-[80px] xl:text-[70px] 2xl:text-[100px] px-3 sm:px-10 py-10 pt-[100px] md:pt-[200px]`}
+            >
+                <p className="w-full text-start">NUESTROS</p>
+                <p className="w-full text-end">PROYECTOS</p>
+            </div>            {
                 projects.map((project, index) => (
                     <ImageSection
                         key={index}

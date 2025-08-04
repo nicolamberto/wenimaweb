@@ -24,8 +24,8 @@ export default function CardDesktop({ card }) {
                         </li>
                     ))}
                 </ul>
-                
-                <ButtonCTA text={'quiero algo asi'} className='absolute bottom-10 left-10 py-4'/>
+
+                <ButtonCTA text={'quiero algo asi'} className='absolute bottom-10 left-10 py-4' />
             </div>
         </div>
     );
