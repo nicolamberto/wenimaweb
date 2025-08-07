@@ -1,28 +1,74 @@
 'use client'
 
-import React, { useState } from 'react'
-import ModalMenu from './elements/modal-menu/ModalMenu';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react'
+import ModalMenu from './elements/modal-menu/ModalMenu'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function NavBar() {
+    const [isVisible, setIsVisible] = useState(true)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [lastScrollY, setLastScrollY] = useState(0)
+    const [hasScrolled, setHasScrolled] = useState(false)
 
-    const [isVisible, setIsVisible] = useState(false)
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+
+            setHasScrolled(currentScrollY > 100)
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setIsVisible(false)
+            } else {
+                setIsVisible(true)
+            }
+
+            setLastScrollY(currentScrollY)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [lastScrollY])
 
     return (
-        <div className='w-full h-20 bg-transparent font-bold p-3 xl:p-14 flex justify-between items-center absolute top-0 z-50'>
-            <Image src={'/images/logos/logoverde.webp'} alt='logo' width={200} height={200} className='w-[50px] h-[30px] md:w-[100px] md:h-[50px]' />
-            <Image src={'/images/logos/logoletrablanco.webp'} alt='logo' width={200} height={200} className='hidden md:block md:w-[200px] md:h-[50px]' />
-            <div className="">
-                <motion.button 
-                onClick={() => setIsVisible(!isVisible)} className='py-2 px-5 bg-[#e6e6e6] text-[#080a00] rounded-full cursor-pointer'
-                whileHover={{scale:1.06}}
-                whileTap={{scale:0.9}}
+        <>
+            <motion.div
+                initial={{ y: 0 }}
+                animate={{ y: isVisible ? 0 : -100 }}
+                transition={{ duration: 0.0, ease: 'easeInOut' }}
+                className={`
+                    w-full h-20 font-bold p-3 xl:p-8 flex justify-between items-center 
+                    fixed top-0 z-50 transition-all duration-300
+                    ${hasScrolled ? 'backdrop-blur-[1px] bg-black/10' : 'bg-transparent'}
+                `}
+            >
+                <Image
+                    src="/images/logos/logoverde.webp"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="w-[50px] h-[30px] md:w-[80px] md:h-[40px]"
+                />
+                <motion.button
+                    initial={{y: hasScrolled ? 0 : 0}}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="py-2 px-5 bg-[#e6e6e6] text-[#080a00] rounded-full cursor-pointer"
+                    whileHover={{ scale: 1.06 }}
+                    whileTap={{ scale: 0.9 }}
                 >
                     MENU
                 </motion.button>
-            </div>
-            <ModalMenu isVisible={isVisible} setIsVisible={setIsVisible} />
-        </div>
+                <Image
+                    src="/images/logos/logoletrablanco.webp"
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    className="hidden md:block md:w-[150px] md:h-[33px]"
+                />
+
+            </motion.div>
+
+            <ModalMenu isVisible={isMenuOpen} setIsVisible={setIsMenuOpen} />
+        </>
     )
 }

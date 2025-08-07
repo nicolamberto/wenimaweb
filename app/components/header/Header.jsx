@@ -1,8 +1,13 @@
+'use client'
+
 import React from 'react'
-import { Boxes } from './background-boxes/background-boxes';
 import { StretchText } from '@/app/elements/StretchText';
 import Image from 'next/image';
 import ButtonCTA from '@/app/elements/ButtonCTA';
+import ElectricText from '@/app/elements/ElectricText';
+import { motion } from 'framer-motion';
+
+const MotionImage = motion(Image)
 
 export default function Header() {
 
@@ -23,18 +28,21 @@ export default function Header() {
             />
 
             {/* boxes */}
-            <div className="absolute inset-0 z-0 pointer-events-auto hidden md:block">
+            {/* <div className="absolute inset-0 z-0 pointer-events-auto hidden md:block">
                 <Boxes />
-            </div>
+            </div> */}
 
             <div className=" w-full flex flex-col min-h-[90vh] xl:min-h-fit  xl:flex-row justify-around items-end absolute px-3 xl:px-20 xl:mt-[250px]  border-yellow-400">
                 {/* texto principal */}
                 <div className="flex w-full relative flex-col text-[clamp(35px,10vw,50px)] sm:text-[50px] md:text-[60px] xl:text-[70px] 2xl:text-[100px] leading-10 sm:leading-12 md:leading-14 xl:leading-24 2xl:-tracking-[0px] font-minima">
-                    <p className='text-start text-[#e6e6e6] pointer-events-none select-none'>DESARROLLO</p>
-                    <p className='text-start text-[#e6e6e6] pointer-events-none select-none'>DIGITAL</p>
+                    <ElectricText text={'DESARROLLO'} className={'text-start text-[#e6e6e6] pointer-events-none select-none'} />
+                    <ElectricText text={'DIGITAL'} className={'text-start text-[#e6e6e6] pointer-events-none select-none'} delay={0.35} />
                     <div className="w-fit relative">
-                        <p className='text-start text-[#e6e6e6] pointer-events-none select-none'>CREATIVO.</p>
-                        <Image
+                        <ElectricText text={'CREATIVO'} className={'text-start text-[#e6e6e6] pointer-events-none select-none'} delay={0.70} />
+                        <MotionImage
+                        initial={{opacity:0}}
+                        animate={{opacity:1}}
+                        transition={{delay:2.2}}
                             src="/images/text-icons/titulos.webp"
                             className='absolute -top-3 -right-5 w-[15px] md:w-[25px]'
                             alt="creativo"
@@ -43,7 +51,7 @@ export default function Header() {
                         />
                     </div>
                     <div className="">
-                        
+
                     </div>
                     <ButtonCTA text="CONTACTA" className='absolute text-[18px] left-0 -bottom-16 leading-8' />
 
