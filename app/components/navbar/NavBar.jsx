@@ -32,10 +32,11 @@ export default function NavBar() {
 
     return (
         <>
+            {/* NAVBAR CONTENEDOR */}
             <motion.div
-                initial={{ y: 0 }}
+                initial={{ y: -100 }}
                 animate={{ y: isVisible ? 0 : -100 }}
-                transition={{ duration: 0.0, ease: 'easeInOut' }}
+                transition={{ duration: 0.2, ease: 'easeInOut' }}
                 className={`
                     w-full h-20 font-bold p-3 xl:p-8 flex justify-between items-center 
                     fixed top-0 z-50 transition-all duration-300
@@ -49,15 +50,10 @@ export default function NavBar() {
                     height={200}
                     className="w-[50px] h-[30px] md:w-[80px] md:h-[40px]"
                 />
-                <motion.button
-                    initial={{y: hasScrolled ? 0 : 0}}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="py-2 px-5 bg-[#e6e6e6] text-[#080a00] rounded-full cursor-pointer"
-                    whileHover={{ scale: 1.06 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    MENU
-                </motion.button>
+
+                {/* ESPACIO VACÍO PARA QUE EL BOTÓN ABSOLUTO NO SE PISE */}
+                <div className="py-2 px-5 w-[100px] h-[40px]" />
+
                 <Image
                     src="/images/logos/logoletrablanco.webp"
                     alt="logo"
@@ -65,8 +61,20 @@ export default function NavBar() {
                     height={200}
                     className="hidden md:block md:w-[150px] md:h-[33px]"
                 />
-
             </motion.div>
+
+            {/* BOTÓN MENU SEPARADO */}
+            <motion.button
+                initial={{ y: 0 }}
+                animate={{ y: isVisible ? 0 : -100 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 py-2 px-5 bg-[#e6e6e6] text-[#080a00] rounded-full cursor-pointer"
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.9 }}
+            >
+                MENU
+            </motion.button>
 
             <ModalMenu isVisible={isMenuOpen} setIsVisible={setIsMenuOpen} />
         </>

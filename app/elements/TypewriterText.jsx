@@ -22,7 +22,6 @@ export default function TypewriterText({
       setShowTypewriter(true)
       setCompleted(false)
     } else if (!once) {
-      // si querés que se repita cuando vuelve a entrar
       setShowTypewriter(false)
       setCompleted(false)
     }
@@ -31,7 +30,7 @@ export default function TypewriterText({
   return (
     <motion.div
       ref={ref}
-      className={`text-[24px] md:text-[32px] text-[#e6e6e6] font-bold ${className}`}
+      className={`${className} inline-block`}
       initial={{ opacity: 0 }}
       animate={{ opacity: isInView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
@@ -40,8 +39,6 @@ export default function TypewriterText({
         <Typewriter
           words={[text]}
           loop={1}
-          cursor
-          cursorStyle="_"
           typeSpeed={typeSpeed}
           deleteSpeed={50}
           delaySpeed={delay}

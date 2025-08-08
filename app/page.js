@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <Projects />
         <Contact />
-{/*         <TypewriterText
+{/*        <TypewriterText
           text="Bienvenidos a mi sitio"
           typeSpeed={60}  
           delay={1000}

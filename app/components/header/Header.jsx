@@ -6,6 +6,7 @@ import Image from 'next/image';
 import ButtonCTA from '@/app/elements/ButtonCTA';
 import ElectricText from '@/app/elements/ElectricText';
 import { motion } from 'framer-motion';
+import ElectricReveal from '@/app/elements/ElectricReveal';
 
 const MotionImage = motion(Image)
 
@@ -40,9 +41,9 @@ export default function Header() {
                     <div className="w-fit relative">
                         <ElectricText text={'CREATIVO'} className={'text-start text-[#e6e6e6] pointer-events-none select-none'} delay={0.70} />
                         <MotionImage
-                        initial={{opacity:0}}
-                        animate={{opacity:1}}
-                        transition={{delay:2.2}}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 2.2 }}
                             src="/images/text-icons/titulos.webp"
                             className='absolute -top-3 -right-5 w-[15px] md:w-[25px]'
                             alt="creativo"
@@ -59,20 +60,21 @@ export default function Header() {
 
                 {/* texto descriptivo lateral */}
                 <div className="block h-full text-center px-1">
-                    <div className="text-[#d6ff00] max-w-[550px] text-justify leading-6 sm:leading-8 relative">
+                    <ElectricReveal flickers={2} delay={700} className="text-[#d6ff00] max-w-[550px] text-justify leading-6 sm:leading-8 relative">
                         <div className="absolute -top-8 right-0 z-10">
-                            <Image src="/images/text-icons/iconoflecha.webp" alt="flecha" width={40} height={40} className='-rotate-90 w-[25px]' />
+                            <Image src="/images/text-icons/iconoflecha.webp" alt="flecha" width={40} height={40} className='-rotate-90 w-[15px] md:w-[25px]' />
                         </div>
                         <p className='text-justify'>
                             Potenciamos marcas con diseño y tecnología. Creamos sitios web modernos y funcionales, desarrollamos identidades visuales sólidas y te acompañamos a construir una presencia digital que te diferencie y genere resultados reales.
                         </p>
-                    </div>
+                    </ElectricReveal>
+
                 </div>
 
             </div>
 
             {/* texto estirado */}
-            <StretchText text={text} className={'absolute bottom-10 text-white/50 pointer-events-none'} />
+            <StretchText text={text} delay={2500} className={'absolute bottom-10 text-white/50 pointer-events-none'} />
         </div>
     )
 }
