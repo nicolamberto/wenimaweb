@@ -60,7 +60,7 @@ export default function Header() {
 
                 {/* texto descriptivo lateral */}
                 <div className="block h-full text-center px-1">
-                    <ElectricReveal flickers={2} delay={700} className="text-[#d6ff00] max-w-[550px] text-justify leading-6 sm:leading-8 relative">
+                    <ElectricReveal flickers={3} delay={400} className="text-[#d6ff00] max-w-[550px] text-justify leading-6 sm:leading-8 relative">
                         <div className="absolute -top-8 right-0 z-10">
                             <Image src="/images/text-icons/iconoflecha.webp" alt="flecha" width={40} height={40} className='-rotate-90 w-[15px] md:w-[25px]' />
                         </div>

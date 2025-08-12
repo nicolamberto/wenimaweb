@@ -65,7 +65,7 @@ export default function NavBar() {
 
             {/* BOTÓN MENU SEPARADO */}
             <motion.button
-                initial={{ y: 0 }}
+                initial={{ y: -100 }}
                 animate={{ y: isVisible ? 0 : -100 }}
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}

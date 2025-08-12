@@ -30,13 +30,10 @@ export default function ParticipantsMobile({ participantes }) {
                                 once={true} // o false si querés que se repita al hacer scroll
                             />
 
-                            <TypewriterText
-                                text={participant.role}
-                                typeSpeed={60}
-                                delay={1000}
-                                className="font-light text-black/60 text-[13px] sm:text-[18px]"
-                                once={true} // o false si querés que se repita al hacer scroll
-                            />
+                            <p className='font-light text-black/60 text-[13px] sm:text-[18px]'>
+                                {participant.role}
+                            </p>
+                            
 
                         </div>
                     </div>

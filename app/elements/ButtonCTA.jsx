@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FaArrowRight } from "react-icons/fa6";
 
-export default function ButtonCTA({ text, className='' }) {
+export default function ButtonCTA({ text, className = '' }) {
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -29,12 +29,29 @@ export default function ButtonCTA({ text, className='' }) {
 
             {/* Texto que cambia de color */}
             <div className="relative transition-colors flex flex-row justify-between items-center px-5">
-                <span className=" z-10  duration-300 px-4 group-hover:text-[#d6ff00]">
+                <motion.span 
+                initial={{ x: 17 }}
+                animate={{
+                    x: 0,
+                }}
+                transition={{
+                    x: { duration: 0.1, ease: 'easeInOut', delay: 1.7 },
+                }}
+                className=" z-10  duration-300 px-4 group-hover:text-[#d6ff00]">
                     {text}
-                </span>
-                <motion.div 
-                    animate={{ rotate: isHovered ? 90 : 0 }}
-                    transition={{ duration: 0.2, ease: 'easeInOut', delay: 0.2 }}
+                </motion.span>
+                <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{
+                        rotate: isHovered ? 90 : 0,
+                        x: 0,
+                        opacity: 1,
+                    }}
+                    transition={{
+                        x: { duration: 0.2, ease: 'easeInOut', delay: 2 },
+                        opacity: { duration: 0.2, ease: 'easeInOut', delay: 2 },
+                        rotate: { duration: 0.2, ease: 'easeInOut', delay: 0.2 },
+                    }}
                 >
                     <FaArrowRight className="text-[#080a00] text-[25px] group-hover:text-[#d6ff00]" />
                 </motion.div>

@@ -1,6 +1,8 @@
 "use client"
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
+import { useIsMobile } from "@/app/hooks/useIsMobile";
+
 
 const WORDS_1 = [
   "Creatividad", "Innovación", "Diseño", "Web", "UX/UI", "Estrategia", "Marca", "Animación"
@@ -13,6 +15,7 @@ const WORDS_3 = [
 ];
 
 function InfiniteCarousel({ words, speed = 30, className = "" }) {
+
   const trackRef = useRef(null);
 
   useEffect(() => {
@@ -54,11 +57,15 @@ function InfiniteCarousel({ words, speed = 30, className = "" }) {
 }
 
 export default function TextCarousel() {
+  const { isMobile } = useIsMobile()
+
   return (
+
     <div className="w-full flex flex-col gap-0 py-18">
-      <InfiniteCarousel words={WORDS_1} speed={22} />
-      <InfiniteCarousel words={WORDS_2} speed={20} />
-      <InfiniteCarousel words={WORDS_3} speed={24} />
+      <InfiniteCarousel words={WORDS_1} speed={ isMobile ? 1 : 22} />
+      <InfiniteCarousel words={WORDS_2} speed={ isMobile ? 4 : 20} />
+      <InfiniteCarousel words={WORDS_3} speed={ isMobile ? 2 : 24} />
     </div>
+
   );
 }

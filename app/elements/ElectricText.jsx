@@ -20,7 +20,7 @@ export default function ElectricText({ text, className = '', delay = 0 }) {
         gsap.set(chars, {
             opacity: 0,
             filter: 'blur(2px)',
-            y: 10,
+            y: 5,
         })
 
         // Usamos requestAnimationFrame + setTimeout para asegurar que el layout esté listo

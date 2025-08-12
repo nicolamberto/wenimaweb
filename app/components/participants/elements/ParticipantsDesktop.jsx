@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import TypewriterTextHover from '@/app/elements/TypewriterTextHover';
 
 export default function ParticipantsDesktop({ participantes }) {
     const [hoverParticipant, setHoverParticipant] = useState(false);
@@ -20,7 +21,14 @@ export default function ParticipantsDesktop({ participantes }) {
                             onMouseLeave={() => setHoverParticipant(false)}
                             className="flex flex-row justify-between items-center pl-10 relative leading-16 2xl:leading-20 z-10">
                             <div className=" flex flex-row 2xl:gap-20 uppercase justify-center items-center">
-                                <p className='text-black/50 font-poppins-eli 2xl:w-[200px]'>{hoverParticipant.role === participant.role ? `${participant.role}` : ''}</p>
+                                <TypewriterTextHover
+                                    text={hoverParticipant.role === participant.role ? participant.role : ''}
+                                    typeSpeed={20}
+                                    delay={200}
+                                    className="text-black/50 font-poppins-eli 2xl:w-[200px]"
+                                    once={false}
+                                />
+
                                 <motion.p
                                     animate={{ x: hoverParticipant && hoverParticipant.name === participant.name ? 50 : 0 }}
                                     transition={{ type: 'tween', duration: 0.25, ease: 'easeOut' }}
