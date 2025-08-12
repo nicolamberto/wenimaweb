@@ -5,11 +5,17 @@ import Lenis from "@studio-freight/lenis";
 
 import "./globals.css";
 import Footer from "./components/footer/Footer";
+import { useIsMobile } from "./hooks/useIsMobile";
 
 
 
 export default function RootLayout({ children }) {
+  const isMobile = useIsMobile()
+
   useEffect(() => {
+    if (isMobile) { return; }
+
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -31,8 +37,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="lenis">
       <body className={`antialiased overflow-x-hidden pb-[40vh] sm:pb-[40vh] lg:pb-[60vh] 2xl:pb-[75vh]`}>
-          {children}
-{/*           <Footer/>
+        {children}
+        {/*           <Footer/>
  */}      </body>
     </html>
   );
