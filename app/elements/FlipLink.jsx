@@ -5,7 +5,7 @@ import { useIsMobile } from '../hooks/useIsMobile'
 const DURATION = 0.25
 const STAGGER = 0.025
 
-export const FlipLink = ({ children, onClick }) => {
+export const FlipLink = ({ children, onClick, className='' }) => {
   const isMobile = useIsMobile()
 
   if (isMobile) {
@@ -13,7 +13,7 @@ export const FlipLink = ({ children, onClick }) => {
     return (
       <div
         onClick={onClick}
-        className="block whitespace-nowrap text-[40px] uppercase sm:text-[80px] md:text-[120px] lg:text-[120px] cursor-pointer"
+        className={`block whitespace-nowrap cursor-pointer `}
         style={{ lineHeight: 0.85 }}
       >
         {children}
@@ -27,7 +27,7 @@ export const FlipLink = ({ children, onClick }) => {
       initial="initial"
       whileHover="hovered"
       onClick={onClick}
-      className="relative block overflow-hidden whitespace-nowrap text-[50px] uppercase sm:text-[80px] md:text-[120px] lg:text-[120px] cursor-pointer"
+      className={` ${className} relative block overflow-hidden whitespace-nowrap cursor-pointer`}
       style={{ lineHeight: 0.85 }}
     >
       <div>

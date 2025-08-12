@@ -5,24 +5,35 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { contact } from '@/lib/data';
+import { SectionTitle } from '@/app/elements/SectionTitle';
+import ElectricText from '@/app/elements/ElectricText';
+import ElectricReveal from '@/app/elements/ElectricReveal';
 
 export default function Contact() {
 
     const [hovered, setHovered] = useState(false);
 
     return (
-        <div className='w-full min-h-[100vh] bg-[#333333] flex flex-col items-center justify-center relative px-3 xl:px-14 pt-[200px] pb-[50px] xl:pt-[400px] xl:pb-[200px] overflow-hidden'>
+        <div
+            id='contacto'
+            className='w-full min-h-[100vh] bg-[#333333] flex flex-col items-center justify-center relative px-3 xl:px-14 pt-[200px] pb-[50px] xl:pt-[400px] xl:pb-[50px] overflow-hidden'>
             <Image src={'/images/text-icons/w-fluo.webp'} alt='logo doble v' width={100} height={100} className='absolute top-5 right-5 xl:top-10 xl:right-10 w-[50px] sm:w-[70px]' />
             <Image src="/images/bg/recursobgparticipants.png" alt="bgparticipantes" width={1000} height={1000} className='absolute opacity-10 -top-44 left-1/2 transform -translate-x-1/2  w-[2400px] object-cover z-0' />
 
             <form className="w-full relative">
 
-                <p className='absolute text-[#e6e6e6] text-[40px] sm:text-[60px] md:text-[70px] xl:text-[100px] font-minima -top-14 md:-top-25 xl:-top-40 left-0'>
+                <div
+                    className={`font-minima leading-9 sm:leading-16 w-full flex flex-col lg:flex-row lg:justify-between text-[#e6e6e6] text-[45px] sm:text-[80px] lg:text-[70px] xl:text-[80px] 2xl:text-[100px] px-3 sm:px-4 lg:px-10 text-nowrap pb-10`}
+                >
+                    <ElectricText text={'CONTANOS'} className="w-full text-start" />
+                    <ElectricText text={'TU IDEA'} className="w-full text-start lg:text-end" delay={0.35} />
+                </div>
+                {/*                 <p className='absolute text-[#e6e6e6] text-[40px] sm:text-[60px] md:text-[70px] xl:text-[100px] font-minima -top-14 md:-top-25 xl:-top-40 left-0'>
                     CONTANOS
                 </p>
                 <p className='absolute text-[#e6e6e6] text-[35px] sm:text-[60px] md:text-[70px] xl:text-[100px] font-minima -bottom-13 md:-bottom-25 xl:-bottom-40 right-0 '>
                     TU IDEA
-                </p>
+                </p> */}
 
                 <div className="flex flex-col gap-4 md:gap-10">
                     {/* Contenedor 2 columnas */}
@@ -73,17 +84,18 @@ export default function Contact() {
                     </motion.button>
                 </div>
             </form>
+
             <div className="w-full px-3 py-8 mt-[80px] sm:mt-[120px] lg:mt-[250px] flex justify-center items-center">
                 <div className="flex flex-wrap justify-between w-full gap-6">
                     {contact.map((item, idx) => (
-                        <div key={idx} className="flex items-center lg:justify-center gap-4 w-full sm:w-[48%] lg:w-[23%]">
+                        <ElectricReveal key={idx} flickers={3} delay={400} className="flex items-center lg:justify-center gap-4 w-full sm:w-[48%] lg:w-[23%]">
                             <div className="p-3 bg-[#d6ff00] rounded-full text-[#333333] text-[20px]">
                                 {item.icon}
                             </div>
                             <span className="text-[#d6ff00] text-base md:text-[22px] lg:text-[20px] font-medium">
                                 {item.text}
                             </span>
-                        </div>
+                        </ElectricReveal>
                     ))}
                 </div>
             </div>

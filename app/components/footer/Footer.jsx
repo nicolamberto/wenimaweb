@@ -1,12 +1,50 @@
 import Image from 'next/image';
 import React from 'react';
-
+import { links } from '@/lib/data';
+import Link from 'next/link';
+import { FlipLink } from '@/app/elements/FlipLink';
 export default function Footer() {
     return (
-        <div className="fixed top-0 w-full h-[100vh] bg-[#080a00] z-0">
-            <Image src={'/images/logos/logoverde.webp'} alt='logo' width={200} height={200} className='w-[50px] h-full md:w-full opacity-5' />
-            <Image src={'/images/logos/logofooter.webp'} alt='logo' width={200} height={200} className=' md:w-[80%] opacity-100 absolute left-1/2 transform -translate-x-1/2 bottom-40' />
+        <div className="fixed bottom-0 w-full h-[40vh] sm:h-[40vh] lg:h-[60vh] 2xl:h-[75vh] bg-[#080a00] z-0 overflow-hidden">
+            <Image
+                src={'/images/bg/bgfooter.webp'}
+                alt='logo'
+                width={15000}
+                height={5000}
+                className='h-fit w-[200vw] md:w-full z-0'
+            />
+            <Image
+                src={'/images/logos/footer.webp'}
+                alt='logo'
+                width={15000}
+                height={3000}
+                className='md:w-[80%] opacity-100 absolute left-1/2 transform -translate-x-1/2 bottom-10 z-10'
+            />
+            <div className="absolute top-0 w-full pl-3 pt-10 gap-5 sm:gap-0 md:p-10 z-50 flex flex-col sm:flex-row justify-around items-start uppercase font-minima  sm:items-center bg-opacity-70  text-white/50">
+                {links.map((link, index) => (
+                    <div className="">
+                        <FlipLink
+                            className='text-[25px] text-white/50'
+                            key={index}
+                            onClick={() => {
+                                // cerrar modal
 
+                                setTimeout(() => {
+                                    const section = document.querySelector(link.href);
+                                    if (section) {
+                                        const offset = -100; // por ejemplo, bajar 100px más
+                                        const top = section.getBoundingClientRect().top + window.scrollY + offset;
+
+                                        window.scrollTo({ top, behavior: 'smooth' });
+                                    }
+                                }, 600); // esperar a que termine la animación
+                            }}
+                        >
+                            {link.name}
+                        </FlipLink>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

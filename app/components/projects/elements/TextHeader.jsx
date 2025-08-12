@@ -32,8 +32,7 @@ export default function TextHeader({ subheading, heading }) {
                 }
             </div>
 
-
-            <p className="text-center w-full relative text-[clamp(70px,30vw,50px)] md:text-[50px] 2xl:text-[100px] uppercase font-minima leading-10">{heading}</p>
+            <p className="text-center w-full relative text-[clamp(70px,30vw,50px)] md:text-[50px] 2xl:text-[100px] uppercase font-minima leading-16 md:leading-10">{heading}</p>
         </motion.div>
     );
 }

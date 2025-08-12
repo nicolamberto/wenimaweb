@@ -1,23 +1,11 @@
 'use client'
 
 import { useEffect } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
 import Lenis from "@studio-freight/lenis";
 
 import "./globals.css";
-import CustomCursor from "./components/custom-cursor/CustomCursor";
-import { CursorProvider } from "./cursor-context/CursorContext";
 import Footer from "./components/footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 
 export default function RootLayout({ children }) {
@@ -42,12 +30,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="lenis">
-      <body className={`antialiased overflow-x-hidden pb-[100vh]`}>
-        <CursorProvider>
-          <CustomCursor />
+      <body className={`antialiased overflow-x-hidden pb-[40vh] sm:pb-[40vh] lg:pb-[60vh] 2xl:pb-[75vh]`}>
           {children}
           <Footer/>
-        </CursorProvider>
       </body>
     </html>
   );

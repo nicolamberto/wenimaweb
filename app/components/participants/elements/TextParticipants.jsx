@@ -4,13 +4,11 @@ import React from 'react'
 export default function TextParticipants() {
 
     return (
-        <div className="w-full flex flex-row justify-end md:justify-around text-black/60 md:px-5 tracking-tighter py-10 md:py-40 text-[20px] leading-7">
-            <p className=' max-w-[500px] font-semibold hidden md:block'>Enjoy 18 exclusive and inspirational talks and keynotes by
-                world-renowned creative leaders and business visionaries, which
-                will enlighten us on key and trending topics such as Artificial
-                Intelligence, Digital Marketing, UX/UI, Branding Strategy, 3D Motion
-                and Animation, Web 3.0, Immersive Experiences, Business for
-                creatives and much more.
+        <div className="w-full flex flex-row justify-end md:justify-around text-black/60 md:px-5 py-20 md:py-40 text-[18px] tracking-[2px] leading-6 text-justify">
+            <p className=' max-w-[500px] font-semibold hidden md:block'>Somos un pequeño estudio creativo enfocado en potenciar marcas a través del diseño y la
+                tecnología. Nos especializamos en crear sitios web visuales, funcionales y alineados con la esencia de cada proyecto Creemos en las ideas simples, los procesos claros y las soluciones
+                que realmente suman. Nos apasiona trabajar con personas que tienen algo para contar y
+                acompañarlas en el desafío de destacarse en lo digital.
             </p>
             {/*             <TypewriterText
                 text="Be inspired by the <br /> world's most creative <br /> and influential minds."
@@ -19,7 +17,9 @@ export default function TextParticipants() {
                 className="uppercase text-justify md:max-w-[250px] text-[15px] md:text-[20px] pr-5 md:pr-0 leading-5 md:leading-normal text-wrap"
                 once={true} // o false si querés que se repita al hacer scroll
             /> */}
-            <p className='uppercase md:max-w-[250px] text-justify text-[15px] md:text-[20px] pr-5 md:pr-0 leading-5 md:leading-normal'>Be inspired by the <br /> world's most creative <br /> and influential minds.</p>
+            <p className='uppercase md:max-w-[250px] text-justify text-[15px] md:text-[20px] px-5 md:px-0 md:pr-0 leading-5 md:leading-normal'>Impulsá tu marca con ideas creativas y <span className='text-black font-bold'>MENTES INFLUYENTES</span>.
+
+</p>
         </div>
     )
 

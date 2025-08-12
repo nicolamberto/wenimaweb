@@ -16,7 +16,7 @@ export default function ImageSection ({ imgUrl, subheading, heading, children })
                 paddingRight: isMobile ? 0 : 22,
             }}
         >
-            <div className="relative h-[100vh] md:h-[120vh]">
+            <div className="relative h-[100vh] md:h-[150vh]">
                 <StickyImage imgUrl={imgUrl} />
                 <TextHeader heading={heading} subheading={subheading} />
             </div>

@@ -10,7 +10,7 @@ export default function ParticipantsDesktop({ participantes }) {
 
 
     return (
-        <div className="hidden xl:flex flex-row justify-between w-full relative z-20">
+        <div className="hidden lg:flex flex-row justify-between w-full relative z-20">
             <div className="flex flex-col gap-0 w-full">
                 {
                     participantes.map((participant, index) => (
@@ -25,7 +25,7 @@ export default function ParticipantsDesktop({ participantes }) {
                                     text={hoverParticipant.role === participant.role ? participant.role : ''}
                                     typeSpeed={20}
                                     delay={200}
-                                    className="text-black/50 font-poppins-eli 2xl:w-[200px]"
+                                    className="text-black/50 font-poppins-eli 2xl:w-[200px] text-[20px] text-nowrap"
                                     once={false}
                                 />
 

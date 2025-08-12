@@ -15,7 +15,9 @@ export default function Header() {
     const text = "Tu idea, con forma y alma.";
 
     return (
-        <div className='h-[90vh] xl:h-[100vh] w-full relative overflow-hidden z-30 bg-black'>
+        <div
+            id='inicio'
+            className='h-[90vh] xl:h-[100vh] w-full relative overflow-hidden z-30 bg-black'>
 
             {/* Imagen de fondo */}
             <Image
@@ -54,7 +56,7 @@ export default function Header() {
                     <div className="">
 
                     </div>
-                    <ButtonCTA text="CONTACTA" className='absolute text-[18px] left-0 -bottom-16 leading-8' />
+                    <ButtonCTA text="CONTACTA" className='absolute text-[13px] left-0 -bottom-16 leading-8 py-1' />
 
                 </div>
 
@@ -64,7 +66,7 @@ export default function Header() {
                         <div className="absolute -top-8 right-0 z-10">
                             <Image src="/images/text-icons/iconoflecha.webp" alt="flecha" width={40} height={40} className='-rotate-90 w-[15px] md:w-[25px]' />
                         </div>
-                        <p className='text-justify'>
+                        <p className='text-justify text-[13px] md:text-[20px] tracking-[3px] leading-5'>
                             Potenciamos marcas con diseño y tecnología. Creamos sitios web modernos y funcionales, desarrollamos identidades visuales sólidas y te acompañamos a construir una presencia digital que te diferencie y genere resultados reales.
                         </p>
                     </ElectricReveal>

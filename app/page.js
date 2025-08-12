@@ -10,7 +10,7 @@ import Contact from "./components/contact/Contact";
 export default function Home() {
   return (
 
-    <div className="flex flex-col justify-start items-center pb-40 relative z-10 ">
+    <div className="flex flex-col justify-start items-center relative z-10 ">
       <NavBar />
       <Header />
       <div className="bg-[#f1eaf0] bg-[url('/images/bg/bgrugoso.png')] bg-repeat w-full h-full z-0">
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <Projects />
         <Contact />
-{/*        <TypewriterText
+        {/*        <TypewriterText
           text="Bienvenidos a mi sitio"
           typeSpeed={60}  
           delay={1000}

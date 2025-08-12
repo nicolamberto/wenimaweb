@@ -10,6 +10,16 @@
 .font-minima {
   font-family: 'font-minima', sans-serif;
 }
+@font-face {
+  font-family: 'font-rounded';
+  src: url('/fonts/rounded.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-rounded {
+  font-family: 'font-rounded', sans-serif;
+}
 
 @font-face {
   font-family: 'font-poppins-el';
@@ -50,7 +60,7 @@ html.lenis {
 
 body{
   background-color: #000000;
-  font-family: 'font-poppins-el', sans-serif;
+  font-family: 'font-rounded', sans-serif;
 }
 
 /* Ocultar scrollbar manteniendo funcionalidad */

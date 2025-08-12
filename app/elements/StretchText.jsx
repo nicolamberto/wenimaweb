@@ -8,7 +8,7 @@ export const StretchText = ({ text, delay, className = '' }) => {
 
   return (
     <div
-      className={`flex justify-between w-full uppercase text-[18px] px-2 2xl:px-10 text-white/50 pointer-events-none ${className}`}
+      className={`flex justify-between w-full uppercase text-[16px] tracking-[2px] px-2 2xl:px-10 text-white/50 pointer-events-none ${className}`}
     >
       {words.map((word, index) => (
         <TypewriterText

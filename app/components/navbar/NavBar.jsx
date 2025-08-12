@@ -4,12 +4,16 @@ import React, { useState, useEffect } from 'react'
 import ModalMenu from './elements/modal-menu/ModalMenu'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-
+import { useIsMobile } from '@/app/hooks/useIsMobile'
 export default function NavBar() {
+
+    const isMobile = useIsMobile()
     const [isVisible, setIsVisible] = useState(true)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [lastScrollY, setLastScrollY] = useState(0)
     const [hasScrolled, setHasScrolled] = useState(false)
+    console.log(isMobile);
+    
 
     useEffect(() => {
         const handleScroll = () => {
@@ -59,7 +63,7 @@ export default function NavBar() {
                     alt="logo"
                     width={200}
                     height={200}
-                    className="hidden md:block md:w-[150px] md:h-[33px]"
+                    className="hidden lg:block md:w-[150px] md:h-[33px]"
                 />
             </motion.div>
 
@@ -69,7 +73,7 @@ export default function NavBar() {
                 animate={{ y: isVisible ? 0 : -100 }}
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 py-2 px-5 bg-[#e6e6e6] text-[#080a00] rounded-full cursor-pointer"
+                className={`fixed top-4 mr-3 ${isMobile ? 'right-0' : ''} lg:left-1/2 lg:transform lg:-translate-x-1/2 z-50 py-1 px-5 text-[16px] bg-[#d6ff00] text-[#080a00] rounded-full cursor-pointer font-minima`}
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.9 }}
             >

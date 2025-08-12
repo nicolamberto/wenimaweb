@@ -10,7 +10,7 @@ export default function ButtonCTA({ text, className = '' }) {
 
     return (
         <motion.button
-            className={`group rounded-full bg-[#d6ff00] py-2 uppercase font-minima text-[12px] md:text-[20px] text-[#080a00] cursor-pointer overflow-hidden ${className}    `}
+            className={`group rounded-full bg-[#d6ff00] py-1 uppercase font-minima text-[12px] md:text-[20px] text-[#080a00] cursor-pointer overflow-hidden ${className}    `}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
         >
@@ -53,7 +53,7 @@ export default function ButtonCTA({ text, className = '' }) {
                         rotate: { duration: 0.2, ease: 'easeInOut', delay: 0.2 },
                     }}
                 >
-                    <FaArrowRight className="text-[#080a00] text-[25px] group-hover:text-[#d6ff00]" />
+                    <FaArrowRight className="text-[#080a00] text-[20px] sm:text-[25px] group-hover:text-[#d6ff00]" />
                 </motion.div>
             </div>
 
