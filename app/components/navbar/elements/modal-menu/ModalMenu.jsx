@@ -37,6 +37,7 @@ export default function ModalMenu({ isVisible, setIsVisible }) {
                         {links.map((link, index) => (
                             <div className="w-fit relative">
                                 <FlipLink
+                                classNameMobile='text-[40px] uppercase sm:text-[80px] md:text-[120px] lg:text-[120px]'
                                     className='text-[50px] uppercase sm:text-[80px] md:text-[120px] lg:text-[120px]'
                                     key={index}
                                     onClick={() => {
