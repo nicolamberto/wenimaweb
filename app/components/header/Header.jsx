@@ -56,7 +56,7 @@ export default function Header() {
                     <div className="">
 
                     </div>
-                    <ButtonCTA href='#contacto' text="CONTACTA" className='absolute text-[13px] left-0 -bottom-16 leading-8 py-1' />
+                    <ButtonCTA href='#contacto' text="CONTACTAR" className='absolute text-[13px] left-0 -bottom-16 leading-8 py-1 hover:border hover:border-[#d6ff00]' />
 
                 </div>
 

@@ -26,7 +26,7 @@ export const Projects = () => {
                         subheading={project.techs}
                         heading={project.name}
                     >
-                        <ProjectDescription title={project.description} description={project.longdescription} name={project.name} />
+                        <ProjectDescription url={project.url} title={project.description} description={project.longdescription} name={project.name} />
                     </ImageSection>
                 ))
             }

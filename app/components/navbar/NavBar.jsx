@@ -73,11 +73,11 @@ export default function NavBar() {
                 animate={{ y: isVisible ? 0 : -100 }}
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`fixed top-4 mr-3 ${isMobile ? 'right-0' : ''} lg:left-1/2 lg:transform lg:-translate-x-1/2 z-50 py-1 px-5 text-[16px] bg-[#d6ff00] text-[#080a00] rounded-full cursor-pointer font-minima`}
+                className={`fixed  mr-3 ${isMobile ? 'right-0 top-6' : 'top-4'} lg:left-1/2 lg:transform lg:-translate-x-1/2 z-50 py-1 px-5 text-[16px] bg-[#d6ff00] text-[#080a00] rounded-full cursor-pointer font-minima`}
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.9 }}
             >
-                MENU
+                MENÚ
             </motion.button>
 
             <ModalMenu isVisible={isMenuOpen} setIsVisible={setIsMenuOpen} />

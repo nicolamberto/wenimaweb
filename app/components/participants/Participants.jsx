@@ -27,7 +27,7 @@ export default function Participants() {
 
             <Image src="/images/bg/recursobgparticipants.png" alt="bgparticipantes" width={1000} height={1000} className='absolute opacity-10 top-32 left-1/2 transform -translate-x-1/2 top- w-[2400px] object-cover z-0' />
 
-            <SectionTitle leftText="CONOCE" rightText="WE.NIMA" />
+            <SectionTitle leftText="CONOCÉ" rightText="WE.NIMA" />
 
             {/* TEXT */}
             <TextParticipants />
