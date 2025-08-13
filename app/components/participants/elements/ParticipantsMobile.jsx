@@ -7,7 +7,7 @@ import ElectricImage from '@/app/elements/ElectricImage';
 export default function ParticipantsMobile({ participantes }) {
 
     return (
-        <div className="flex flex-col justify-center items-center w-full relative p-3 gap-10 ">
+        <div className="flex flex-col justify-center items-center w-full relative p-3 gap-5 ">
             {
                 participantes.map((participant, index) => (
 
@@ -44,7 +44,7 @@ export default function ParticipantsMobile({ participantes }) {
 
             <div className="relative font-semibold block text-justify px-4 mt-20 md:hidden tracking-[2px] text-black/60">
                 <p className=''>
-                   Somos un estudio creativo que combina diseño y tecnología para llevar las marcas al siguiente nivel. Creamos sitios web visuales, funcionales y fieles a la esencia de cada proyecto, cuidando cada detalle como si fuera propio. Apostamos por ideas claras, procesos directos y soluciones que realmente hacen la diferencia. Nos encanta trabajar con personas que tienen algo para contar y acompañarlas en el reto de brillar en lo digital… porque cuando se trata de cumplir expectativas, venimos con todas las herramientas.
+                    Somos un estudio creativo que combina diseño y tecnología para llevar las marcas al siguiente nivel. Creamos sitios web visuales, funcionales y fieles a la esencia de cada proyecto, cuidando cada detalle como si fuera propio. Apostamos por ideas claras, procesos directos y soluciones que realmente hacen la diferencia. Nos encanta trabajar con personas que tienen algo para contar y acompañarlas en el reto de brillar en lo digital… porque cuando se trata de cumplir expectativas, venimos con todas las herramientas.
                 </p>
                 <ElectricImage
                     src={'/images/text-icons/icononegro.webp'}
