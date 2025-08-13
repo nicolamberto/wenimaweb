@@ -12,7 +12,8 @@ export const ScrollServices = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="flex flex-col pb-18 relative">
+    <div             id="servicios"
+ className="flex flex-col pb-18 relative">
       {/* TITULO */}
       <TitleScrollServices />
       <Image src="/images/bg/recursobgparticipants.png" alt="bgparticipantes" width={1000} height={1000} className='absolute opacity-10 -top-0 right-0  w-[1000px] object-cover z-0' />

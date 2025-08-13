@@ -5,7 +5,7 @@ import { useIsMobile } from '../hooks/useIsMobile'
 const DURATION = 0.25
 const STAGGER = 0.025
 
-export const FlipLink = ({ children, onClick, className='', classNameMobile = '' }) => {
+export const FlipLink = ({ children, onClick, className = '', classNameMobile = '' }) => {
   const isMobile = useIsMobile()
 
   if (isMobile) {

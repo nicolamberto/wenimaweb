@@ -23,7 +23,7 @@ export default function Header() {
             <Image
                 src="/images/banner/bannerdesktop.jpg"
                 alt="Banner de fondo"
-                layout="fill"
+                fill
                 objectFit="cover"
                 quality={100}
                 priority
@@ -56,7 +56,7 @@ export default function Header() {
                     <div className="">
 
                     </div>
-                    <ButtonCTA text="CONTACTA" className='absolute text-[13px] left-0 -bottom-16 leading-8 py-1' />
+                    <ButtonCTA href='#contacto' text="CONTACTA" className='absolute text-[13px] left-0 -bottom-16 leading-8 py-1' />
 
                 </div>
 

@@ -46,7 +46,7 @@ export default function ModalMenu({ isVisible, setIsVisible }) {
                                         setTimeout(() => {
                                             const section = document.querySelector(link.href);
                                             if (section) {
-                                                const offset = -100; // por ejemplo, bajar 100px más
+                                                const offset = -0; // por ejemplo, bajar 100px más
                                                 const top = section.getBoundingClientRect().top + window.scrollY + offset;
 
                                                 window.scrollTo({ top, behavior: 'smooth' });
@@ -56,7 +56,7 @@ export default function ModalMenu({ isVisible, setIsVisible }) {
                                 >
                                     {link.name}
                                 </FlipLink>
-                                <Image src={link.icon} width={50} height={50} className='w-[20px] absolute -top-3 -right-5' />
+                                <Image src={link.icon} width={50} height={50} alt='icon-link' className='w-[20px] xl:w-[50px] absolute -top-3 -right-5 xl:-top-8 xl:-right-12' />
                             </div>
 
                         ))}

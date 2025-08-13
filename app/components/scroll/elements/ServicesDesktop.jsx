@@ -34,7 +34,7 @@ export default function ServicesDesktop() {
     const x = useTransform(scrollYProgress, [0, 1], ["0%", endX]);
 
     return (
-        <section id="servicios" ref={targetRef} className="relative h-[300vh]">
+        <section ref={targetRef} className="relative h-[300vh]">
             <div className="sticky top-0 h-screen flex items-center overflow-hidden px-0 md:px-4 w-[100vw] py-40">
                 <motion.div style={{ x }} className="flex gap-8">
                     {services.map((card, i) => (

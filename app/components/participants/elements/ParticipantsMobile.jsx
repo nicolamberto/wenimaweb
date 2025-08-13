@@ -2,8 +2,9 @@ import React from 'react'
 import Image from 'next/image';
 import TypewriterText from '@/app/elements/TypewriterText';
 import ElectricImage from '@/app/elements/ElectricImage';
-export default function ParticipantsMobile({ participantes }) {
 
+
+export default function ParticipantsMobile({ participantes }) {
 
     return (
         <div className="flex flex-col justify-center items-center w-full relative p-3 gap-10 ">
@@ -22,7 +23,6 @@ export default function ParticipantsMobile({ participantes }) {
                             />
                         </div>
 
-
                         <div className="flex flex-col justify-between pl-3 sm:pl-10 py-4 sm:py-8 uppercase">
 
                             <TypewriterText
@@ -37,7 +37,6 @@ export default function ParticipantsMobile({ participantes }) {
                                 {participant.role}
                             </p>
 
-
                         </div>
                     </div>
                 ))
@@ -45,10 +44,7 @@ export default function ParticipantsMobile({ participantes }) {
 
             <div className="relative font-semibold block text-justify px-4 mt-20 md:hidden tracking-[2px] text-black/60">
                 <p className=''>
-                    Somos un pequeño estudio creativo enfocado en potenciar marcas a través del <span className='text-black'>diseño y la
-                        tecnología</span> . Nos especializamos en crear sitios web visuales, funcionales y alineados con la esencia de cada proyecto Creemos en las <span className='text-black'>ideas simples, los procesos claros y las soluciones
-                            que realmente suman.</span>  Nos apasiona trabajar con personas que tienen algo para contar y
-                    acompañarlas en el desafío de destacarse en lo digital.
+                   Somos un estudio creativo que combina diseño y tecnología para llevar las marcas al siguiente nivel. Creamos sitios web visuales, funcionales y fieles a la esencia de cada proyecto, cuidando cada detalle como si fuera propio. Apostamos por ideas claras, procesos directos y soluciones que realmente hacen la diferencia. Nos encanta trabajar con personas que tienen algo para contar y acompañarlas en el reto de brillar en lo digital… porque cuando se trata de cumplir expectativas, venimos con todas las herramientas.
                 </p>
                 <ElectricImage
                     src={'/images/text-icons/icononegro.webp'}

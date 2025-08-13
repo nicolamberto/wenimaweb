@@ -1,7 +1,6 @@
 
 import React from "react";
 import { projects } from "@/lib/data";
-import { SectionTitle } from "@/app/elements/SectionTitle";
 import ImageSection from "./elements/ImageSection";
 import ProjectDescription from "./elements/ProjectDescription";
 import ElectricText from "@/app/elements/ElectricText";

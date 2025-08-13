@@ -25,14 +25,14 @@ export default function CardDesktop({ card }) {
                     {card.features.map((feature, idx) => (
                         <li
                             key={idx}
-                            className="text-white/60 text-base sm:text-lg xl:text-[20px] pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-[#f1eaf0] before:pr-2"
+                            className="text-white/60 text-base sm:text-lg xl:text-[20px] pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-[#f1eaf0] tracking-[2px] before:pr-2"
                         >
                             {feature}
                         </li>
                     ))}
                 </ul>
 
-                <ButtonCTA text={'quiero algo asi'} className='absolute bottom-10 left-10 py-4' />
+                <ButtonCTA href='#contacto' text={'quiero algo asi'} className='absolute bottom-10 left-10 py-4' />
             </div>
         </div>
     );

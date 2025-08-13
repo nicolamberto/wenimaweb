@@ -5,7 +5,6 @@ import CardMobile from './cards/CardMobile'
 export default function ServicesMobile() {
     return (
         <section
-            id="servicios"
             className="w-full overflow-x-scroll no-scrollbar py-10"
             style={{
                 WebkitOverflowScrolling: 'touch',

@@ -5,10 +5,7 @@ export default function TextParticipants() {
 
     return (
         <div className="w-full flex flex-row justify-end md:justify-around text-black/60 md:px-5 py-20 md:py-40 text-[18px] tracking-[2px] leading-6 text-justify">
-            <p className=' max-w-[500px] font-semibold hidden md:block'>Somos un pequeño estudio creativo enfocado en potenciar marcas a través del diseño y la
-                tecnología. Nos especializamos en crear sitios web visuales, funcionales y alineados con la esencia de cada proyecto Creemos en las ideas simples, los procesos claros y las soluciones
-                que realmente suman. Nos apasiona trabajar con personas que tienen algo para contar y
-                acompañarlas en el desafío de destacarse en lo digital.
+            <p className=' max-w-[500px] font-semibold hidden md:block'>Somos un estudio creativo que combina diseño y tecnología para llevar las marcas al siguiente nivel. Creamos sitios web visuales, funcionales y fieles a la esencia de cada proyecto, cuidando cada detalle como si fuera propio. Apostamos por ideas claras, procesos directos y soluciones que realmente hacen la diferencia. Nos encanta trabajar con personas que tienen algo para contar y acompañarlas en el reto de brillar en lo digital… porque cuando se trata de cumplir expectativas, venimos con todas las herramientas.
             </p>
             {/*             <TypewriterText
                 text="Be inspired by the <br /> world's most creative <br /> and influential minds."

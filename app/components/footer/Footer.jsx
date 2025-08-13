@@ -27,12 +27,10 @@ export default function Footer() {
                             className='text-[25px] text-white/50'
                             key={index}
                             onClick={() => {
-                                // cerrar modal
-
                                 setTimeout(() => {
                                     const section = document.querySelector(link.href);
                                     if (section) {
-                                        const offset = -100; // por ejemplo, bajar 100px más
+                                        const offset = -0; // por ejemplo, bajar 100px más
                                         const top = section.getBoundingClientRect().top + window.scrollY + offset;
 
                                         window.scrollTo({ top, behavior: 'smooth' });

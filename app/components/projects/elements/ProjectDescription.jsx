@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonCTA from '../../../elements/ButtonCTA';
-
+import { motion } from 'framer-motion';
+import { FlipLink } from '@/app/elements/FlipLink';
 export default function ProjectDescription({ title, description, name }) {
     return (
         <div className="mx-auto max-w-full px-5 md:px-16 lg:px-20 pb-24 2xl:pb-32 pt-5 lg:pt-20 mb-12 relative">
@@ -16,8 +17,7 @@ export default function ProjectDescription({ title, description, name }) {
                     {description}
                 </p>
             </div>
-            <ButtonCTA text="Quiero algo así" className='absolute bottom-0 2xl:right-20 2xl:py-4' />
-            <button className='absolute bottom-0 left-20 tracking-[2px] hidden'>Ver sitio</button>
+            <ButtonCTA href='#contacto' text="Quiero algo así" className='absolute bottom-0 2xl:right-20 py-2 2xl:py-4' />
         </div>
     );
 }
