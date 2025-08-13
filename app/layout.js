@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="lenis">
-      <body className={`antialiased overflow-x-hidden pb-[40vh] sm:pb-[40vh] lg:pb-[60vh] 2xl:pb-[75vh]`}>
+      <body className={`antialiased overflow-x-hidden lg:pb-[60vh] 2xl:pb-[75vh]`}>
         {children}
         <Footer />
       </body>

@@ -10,7 +10,7 @@ export default function Footer() {
 
 
     return (
-        <div className="block relative bottom-0 w-full h-[40vh] sm:h-[40vh] lg:h-[60vh] 2xl:h-[75vh] bg-[#080a00] z-0 overflow-hidden">
+        <div className={` ${isMobile ? 'block relative' : 'fixed' } bottom-0 w-full h-[42vh] sm:h-[40vh] lg:h-[60vh] 2xl:h-[75vh] bg-[#080a00] z-0 overflow-hidden`}>
             <Image
                 src={'/images/bg/bgfooter.webp'}
                 alt='logo'
