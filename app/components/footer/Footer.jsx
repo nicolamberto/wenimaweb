@@ -14,15 +14,15 @@ export default function Footer() {
             <Image
                 src={'/images/bg/bgfooter.webp'}
                 alt='logo'
-                width={isMobile?1000 :15000}
-                height={isMobile?400 :5000}
+                width={isMobile? 700 : 15000}
+                height={isMobile? 250 : 5000}
                 className='h-fit w-[200vw] md:w-full z-0'
             />
             <Image
                 src={'/images/logos/footer.webp'}
                 alt='logo'
-                width={15000}
-                height={3000}
+                width={isMobile? 700 : 15000}
+                height={isMobile? 250 : 5000}
                 className='md:w-[80%] opacity-100 absolute left-1/2 transform -translate-x-1/2 bottom-10 z-10'
             />
             <div className="absolute top-0 w-full pl-3 pt-10 gap-5 sm:gap-0 md:p-10 z-50 flex flex-col sm:flex-row justify-around items-start uppercase font-minima  sm:items-center bg-opacity-70  text-white/50">
