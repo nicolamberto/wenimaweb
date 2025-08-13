@@ -20,7 +20,6 @@ export default function Home() {
           <ScrollServices />
         </div>
         <Projects />
-        <Contact />
         {/*        <TypewriterText
           text="Bienvenidos a mi sitio"
           typeSpeed={60}  

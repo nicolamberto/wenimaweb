@@ -25,22 +25,22 @@ export default function Contact() {
             formRef.current,
             'R6vv-DGFwoNEPAlSG'
         )
-        .then(() => {
-            alert('Mensaje enviado correctamente ✅');
-            formRef.current.reset();
-        })
-        .catch((error) => {
-            console.error(error);
-            alert('Hubo un problema al enviar el mensaje ❌');
-        })
-        .finally(() => setLoading(false));
+            .then(() => {
+                alert('Mensaje enviado correctamente ✅');
+                formRef.current.reset();
+            })
+            .catch((error) => {
+                console.error(error);
+                alert('Hubo un problema al enviar el mensaje ❌');
+            })
+            .finally(() => setLoading(false));
     };
 
     return (
         <div
             id='contacto'
             className='w-full min-h-[100vh] bg-[#333333] flex flex-col items-center justify-center relative px-3 xl:px-14 pt-[200px] pb-[50px] xl:pt-[400px] xl:pb-[50px] overflow-hidden'>
-            
+
             {/* Icono esquina */}
             <Image src={'/images/text-icons/w-fluo.webp'} alt='logo doble v' width={500} height={500} className='absolute top-5 right-5 xl:top-10 xl:right-10 w-[50px] sm:w-[70px] xl:w-[140px]' />
             {/* Fondo */}
