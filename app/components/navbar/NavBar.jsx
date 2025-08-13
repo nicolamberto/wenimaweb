@@ -5,6 +5,7 @@ import ModalMenu from './elements/modal-menu/ModalMenu'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useIsMobile } from '@/app/hooks/useIsMobile'
+import Link from 'next/link'
 export default function NavBar() {
 
     const isMobile = useIsMobile()
@@ -13,7 +14,7 @@ export default function NavBar() {
     const [lastScrollY, setLastScrollY] = useState(0)
     const [hasScrolled, setHasScrolled] = useState(false)
     console.log(isMobile);
-    
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -48,23 +49,28 @@ export default function NavBar() {
                 `}
             >
                 <Image
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     src="/images/logos/logoverde.webp"
                     alt="logo"
                     width={200}
                     height={200}
-                    className="w-[50px] h-[30px] md:w-[80px] md:h-[40px]"
+                    className="w-[50px] h-[30px] md:w-[80px] md:h-[40px] cursor-pointer"
                 />
 
                 {/* ESPACIO VACÍO PARA QUE EL BOTÓN ABSOLUTO NO SE PISE */}
                 <div className="py-2 px-5 w-[100px] h-[40px]" />
 
+
+
                 <Image
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     src="/images/logos/logoletrablanco.webp"
                     alt="logo"
                     width={200}
                     height={200}
-                    className="hidden lg:block md:w-[150px] md:h-[33px]"
+                    className="hidden lg:block md:w-[150px] md:h-[33px] cursor-pointer"
                 />
+
             </motion.div>
 
             {/* BOTÓN MENU SEPARADO */}

@@ -48,8 +48,8 @@ export default function ParticipantsDesktop({ participantes }) {
                     <Image
                         src={hoverParticipant.image}
                         alt='img'
-                        width={400}
-                        height={500}
+                        width={1080}
+                        height={1910}
                         className='object-cover'
                     />
                 </div>

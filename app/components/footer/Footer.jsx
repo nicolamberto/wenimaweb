@@ -10,7 +10,7 @@ export default function Footer() {
 
 
     return (
-        <div className={` ${isMobile ? 'block relative' : 'fixed' } bottom-0 w-full h-[42vh] sm:h-[40vh] lg:h-[60vh] 2xl:h-[75vh] bg-[#080a00] z-0 overflow-hidden`}>
+        <div className={` ${isMobile ? 'block relative' : 'fixed'} bottom-0 w-full h-[50vh] sm:h-[40vh] lg:h-[60vh] 2xl:h-[75vh] bg-[#080a00] z-0 overflow-hidden`}>
             <Image
                 src={'/images/bg/bgfooter.webp'}
                 alt='logo'
@@ -23,7 +23,7 @@ export default function Footer() {
                 alt='logo'
                 width={isMobile ? 300 : 1000}
                 height={isMobile ? 150 : 500}
-                className='md:w-[80%] opacity-100 absolute left-1/2 transform -translate-x-1/2 bottom-10 z-10'
+                className='md:w-[80%] opacity-100 absolute left-1/2 transform -translate-x-1/2 bottom-32 z-10'
             />
             <div className="absolute top-0 w-full pl-3 pt-10 gap-5 sm:gap-0 md:p-10 z-50 flex flex-col sm:flex-row justify-around items-start uppercase font-minima  sm:items-center bg-opacity-70  text-white/50">
                 {links.map((link, index) => (
@@ -48,6 +48,10 @@ export default function Footer() {
                     </div>
                 ))}
             </div>
+
+{/*             <div className="absolute bottom-2 w-full z50">
+                <p>Desarrollado por we.nima, todos los derechos reservados</p>
+            </div> */}
         </div>
     );
 }

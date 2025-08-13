@@ -11,21 +11,21 @@ export default function ElectricText({ text, className = '', delay = 0 }) {
     const textRef = useRef(null)
 
     useEffect(() => {
-        const split = new SplitType(textRef.current, {
-            types: 'chars',
-        })
+        if (!textRef.current) return
 
-        const chars = split.chars
+        let split
+        const ctx = gsap.context(() => {
+            split = new SplitType(textRef.current, { types: 'chars' })
+            const chars = split.chars
 
-        gsap.set(chars, {
-            opacity: 0,
-            filter: 'blur(2px)',
-            y: 5,
-        })
+            // Estado inicial
+            gsap.set(chars, {
+                opacity: 0,
+                filter: 'blur(2px)',
+                y: 5,
+            })
 
-        // Usamos requestAnimationFrame + setTimeout para asegurar que el layout esté listo
-        requestAnimationFrame(() => {
-            setTimeout(() => {
+            const initAnimation = () => {
                 ScrollTrigger.create({
                     trigger: textRef.current,
                     start: 'top 85%',
@@ -33,7 +33,6 @@ export default function ElectricText({ text, className = '', delay = 0 }) {
                     onEnter: () => {
                         chars.forEach((char) => {
                             const randomDelay = Math.random() * 0.2
-
                             gsap.to(char, {
                                 opacity: 1,
                                 filter: 'blur(0px)',
@@ -55,20 +54,29 @@ export default function ElectricText({ text, className = '', delay = 0 }) {
                     },
                 })
 
-                ScrollTrigger.refresh() // Recalcula después de que todo se cargó bien
-            }, 100) // este delay ayuda a estabilizar el layout
-        })
+                ScrollTrigger.refresh()
+            }
+
+            // Espera a que las fuentes carguen antes de iniciar
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(() => {
+                    requestAnimationFrame(initAnimation)
+                })
+            } else {
+                requestAnimationFrame(initAnimation)
+            }
+        }, textRef)
 
         return () => {
-            ScrollTrigger.getAll().forEach((t) => t.kill())
+            ctx.revert() // Limpia todo al desmontar
+            if (split) split.revert() // Revierte el split del texto
         }
     }, [delay])
-
 
     return (
         <p
             ref={textRef}
-            className={`${className}`}
+            className={className}
         >
             {text}
         </p>

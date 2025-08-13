@@ -4,6 +4,8 @@ import React from 'react';
 import ButtonCTA from '../../../elements/ButtonCTA';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+
+const MotionLink = motion(Link);
 export default function ProjectDescription({ title, description, name, url }) {
     return (
         <div className="mx-auto max-w-full px-5 md:px-16 lg:px-20 pb-24 2xl:pb-32 pt-5 lg:pt-20 mb-12 relative">
@@ -19,11 +21,13 @@ export default function ProjectDescription({ title, description, name, url }) {
                     {description}
                 </p>
             </div>
-            <ButtonCTA href='#contacto' text="Quiero algo así" className='absolute bottom-10 sm:bottom-0 left-3 sm:left-10 md:left-22 2xl:right-20 py-2 2xl:py-4' />
+            <ButtonCTA href='#contacto' text="Quiero algo así" className='absolute bottom-10 sm:bottom-0 left-3 sm:left-10 md:left-22 2xl:left-auto 2xl:right-20 py-2 2xl:py-4' />
 
             <div className="absolute -bottom-2 md:bottom-0 left-6 sm:right-10 md:right-22 2xl:left-22">
-                <Link href={url} target="_blank" rel="noopener noreferrer">
                     <motion.a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         initial="initial"
                         whileHover="hover"
                         className="relative font-minima text-[13px] md:text-[20px] text-[#080a00]/70 hover:text-[#080a00] transition bg-transparent border-none p-0 cursor-pointer"
@@ -34,11 +38,10 @@ export default function ProjectDescription({ title, description, name, url }) {
                                 initial: { scaleX: 0 },
                                 hover: { scaleX: 1, transition: { duration: 0.2, ease: "easeInOut" } },
                             }}
-                            className="absolute left-0 bottom-0 h-[5px] bg-[#d6ff00] rounded-full w-full"
+                            className="absolute left-0 -bottom-2 h-[5px] bg-[#d6ff00] rounded-full w-full"
                             style={{ originX: 0 }}
                         />
                     </motion.a>
-                </Link>
             </div>
 
         </div>
