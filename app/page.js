@@ -1,4 +1,3 @@
-import Image from "next/image";
 import NavBar from "./components/navbar/NavBar";
 import Participants from "./components/participants/Participants";
 import Header from "./components/header/Header";
@@ -20,6 +19,7 @@ export default function Home() {
           <ScrollServices />
         </div>
         <Projects />
+        <Contact />
         {/*        <TypewriterText
           text="Bienvenidos a mi sitio"
           typeSpeed={60}  
