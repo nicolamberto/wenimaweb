@@ -1,16 +1,21 @@
 import Image from 'next/image';
 import React from 'react';
 import { links } from '@/lib/data';
-import Link from 'next/link';
 import { FlipLink } from '@/app/elements/FlipLink';
+import { useIsMobile } from '@/app/hooks/useIsMobile';
+
 export default function Footer() {
+
+    const isMobile = useIsMobile();
+
+
     return (
         <div className="fixed bottom-0 w-full h-[40vh] sm:h-[40vh] lg:h-[60vh] 2xl:h-[75vh] bg-[#080a00] z-0 overflow-hidden">
             <Image
                 src={'/images/bg/bgfooter.webp'}
                 alt='logo'
-                width={15000}
-                height={5000}
+                width={isMobile?1000 :15000}
+                height={isMobile?400 :5000}
                 className='h-fit w-[200vw] md:w-full z-0'
             />
             <Image
