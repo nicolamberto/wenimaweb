@@ -1,7 +1,5 @@
 import React from 'react';
 import ButtonCTA from '../../../elements/ButtonCTA';
-import { motion } from 'framer-motion';
-import { FlipLink } from '@/app/elements/FlipLink';
 export default function ProjectDescription({ title, description, name }) {
     return (
         <div className="mx-auto max-w-full px-5 md:px-16 lg:px-20 pb-24 2xl:pb-32 pt-5 lg:pt-20 mb-12 relative">
