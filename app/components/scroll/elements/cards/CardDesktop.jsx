@@ -32,7 +32,7 @@ export default function CardDesktop({ card, i }) {
                     ))}
                 </ul>
 
-                <ButtonCTA href='#contacto' text={'contactar'} className='absolute bottom-10 left-10 py-4 hover:border hover:border-[#d6ff00]' />
+                <ButtonCTA href='#contacto' text={'contactar'} className='absolute bottom-20 left-10 py-4 hover:border hover:border-[#d6ff00]' />
             </div>
         </div>
     );

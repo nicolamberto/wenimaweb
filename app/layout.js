@@ -1,7 +1,6 @@
 import "./globals.css";
 import ClientLayout from "./ClientLayout";
 
-
 export const metadata = {
   metadataBase: new URL("https://wenimaestudio.com/"),
   title: {
@@ -26,13 +25,22 @@ export const metadata = {
     ],
     type: "website",
   },
+  icons: {
+    icon: "/favicon-v2.webp", // favicon en formato webp
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "We Nima Estudio – Digital Creativo",
+    description:
+      "Diseño web personalizado, branding y desarrollo digital que conecta tu idea con alma.",
+    images: ["https://wenimaestudio.com/opengraph/graphwenima.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en" className="lenis">
-      <body className={`antialiased overflow-x-hidden lg:pb-[60vh] 2xl:pb-[75vh]`}>
+      <body className="antialiased overflow-x-hidden lg:pb-[60vh] 2xl:pb-[75vh]">
         <ClientLayout>
           {children}
         </ClientLayout>

@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer'
 import { useIsMobile } from './hooks/useIsMobile';
 import Lenis from "@studio-freight/lenis";
 import WhatsApp from './elements/WhatsApp';
+import { useScrollToTopOnLoad } from './hooks/useScrollToTopOnLoad';
 export default function ClientLayout({ children }) {
 
     const isMobile = useIsMobile()
@@ -45,8 +46,8 @@ export default function ClientLayout({ children }) {
         }
     }, [isMobile]);
 
-    // Método para acceder a la instancia de Lenis desde otros componentes si es necesario
-    const getLenis = () => lenisInstance;
+    useScrollToTopOnLoad();
+
     return (
         <div>
             <NavBar />
