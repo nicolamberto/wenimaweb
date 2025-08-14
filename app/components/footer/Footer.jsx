@@ -27,7 +27,7 @@ export default function Footer() {
             />
             <div className="absolute top-0 w-full pl-3 pt-10 gap-5 sm:gap-0 md:p-10 z-50 flex flex-col sm:flex-row justify-around items-start uppercase font-minima  sm:items-center bg-opacity-70  text-white/50">
                 {links.map((link, index) => (
-                    <div className="">
+                    <div key={index} className="">
                         <FlipLink
                             className='text-[25px] text-white/50'
                             key={index}

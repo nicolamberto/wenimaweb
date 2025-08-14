@@ -15,7 +15,6 @@ export default function CardMobile({ card, i }) {
             <div className="w-fit relative">
                 <h3 className="text-[20px] font-minima font-bold text-white/90 uppercase pl-10">{card.title}</h3>
                 <Image src={card.iconText} className='absolute -left-2 top-0 translate-y-[35%] w-[20px]' alt="creativo" width={40} height={40} />
-
             </div>
             <ul className="space-y-2 mt-0">
                 {card.features.map((feature, idx) => (
