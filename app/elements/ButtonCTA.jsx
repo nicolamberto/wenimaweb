@@ -3,9 +3,10 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FaArrowRight } from "react-icons/fa6";
+import { useIsMobile } from '../hooks/useIsMobile';
 
 export default function ButtonCTA({ text, href = '', className = '' }) {
-
+    const isMobile = useIsMobile();
     const [isHovered, setIsHovered] = useState(false);
 
     const handleClick = (e) => {
@@ -20,6 +21,42 @@ export default function ButtonCTA({ text, href = '', className = '' }) {
         }
     };
 
+    //  Versión móvil sin interacciones
+    if (isMobile) {
+        return (
+            <button
+                onClick={handleClick}
+                className={`rounded-full bg-[#d6ff00] py-1 uppercase font-minima text-[12px] md:text-[20px] text-[#080a00] px-5 flex items-center justify-between ${className}`}
+            >
+                <motion.span
+                    initial={{ x: 15 }}
+                    animate={{ x: 0 }}
+                    transition={{
+                        x: { duration: 0.1, ease: 'easeInOut', delay: 1.7 },
+                    }}
+                    className="z-10 duration-300 px-4 group-hover:text-[#d6ff00]"
+                >
+                    {text}
+                </motion.span>
+                <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{
+                        x: 0,
+                        opacity: 1,
+                    }}
+                    transition={{
+                        x: { duration: 0.2, ease: 'easeInOut', delay: 2 },
+                        opacity: { duration: 0.2, ease: 'easeInOut', delay: 2 },
+                    }}
+                >
+                    <FaArrowRight className="text-[#080a00] text-[20px] sm:text-[25px] group-hover:text-[#d6ff00]" />
+                </motion.div>
+
+            </button>
+        );
+    }
+
+    //  Versión desktop con animaciones
     return (
         <motion.button
             className={`group rounded-full bg-[#d6ff00] py-1 uppercase font-minima text-[12px] md:text-[20px] text-[#080a00] cursor-pointer overflow-hidden ${className}`}

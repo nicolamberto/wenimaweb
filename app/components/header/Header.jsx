@@ -21,7 +21,7 @@ export default function Header() {
 
             {/* Imagen de fondo */}
             <Image
-                src="/images/banner/bannerdesktop.jpg"
+                src="/images/banner/bannerdesktop.webp"
                 alt="Banner de fondo"
                 fill
                 objectFit="cover"
@@ -31,9 +31,6 @@ export default function Header() {
             />
 
             {/* boxes */}
-            {/* <div className="absolute inset-0 z-0 pointer-events-auto hidden md:block">
-                <Boxes />
-            </div> */}
 
             <div className=" w-full flex flex-col min-h-[90vh] xl:min-h-fit  xl:flex-row justify-around items-end absolute px-3 xl:px-20 xl:mt-[250px]  border-yellow-400">
                 {/* texto principal */}

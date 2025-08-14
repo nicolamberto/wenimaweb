@@ -16,6 +16,9 @@ const WORDS_3 = [
 
 function InfiniteCarousel({ words, speed = 30, className = "" }) {
 
+  const { isMobile } = useIsMobile()
+
+
   const trackRef = useRef(null);
 
   useEffect(() => {
@@ -43,7 +46,7 @@ function InfiniteCarousel({ words, speed = 30, className = "" }) {
         className="flex whitespace-nowrap gap-0"
         style={{ willChange: "transform" }}
       >
-        {[...words, ...words, ...words].map((word, i) => (
+        {(isMobile ? [...words] : [...words, ...words, ...words]).map((word, i) => (
           <div key={i} className="flex items-center group px-2 select-none">
             <span className="text-2xl md:text-[40px] font-minima text-[#b5b5b5]/20 uppercase transition-colors duration-200 group-hover:text-[#d6ff00]/50 group-hover:opacity-90">
               {word}
@@ -62,9 +65,9 @@ export default function TextCarousel() {
   return (
 
     <div className="w-full flex flex-col gap-0 py-18">
-      <InfiniteCarousel words={WORDS_1} speed={ isMobile ? 1 : 22} />
-      <InfiniteCarousel words={WORDS_2} speed={ isMobile ? 4 : 20} />
-      <InfiniteCarousel words={WORDS_3} speed={ isMobile ? 2 : 24} />
+      <InfiniteCarousel words={WORDS_1} speed={isMobile ? 1 : 22} />
+      <InfiniteCarousel words={WORDS_2} speed={isMobile ? 4 : 20} />
+      <InfiniteCarousel words={WORDS_3} speed={isMobile ? 2 : 24} />
     </div>
 
   );

@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import ButtonCTA from '@/app/elements/ButtonCTA';
 
-export default function CardDesktop({ card }) {
+export default function CardDesktop({ card, i }) {
     return (
-        <div className=" relative h-[80vh] w-[100vw] mx-0 md:w-[650px] lg:w-[750px] shrink-0 overflow-hidden flex flex-col justify-between border border-[#d6ff00]/20 bg-[#333333]/50">
+        <div key={i} className=" relative h-[80vh] w-[100vw] mx-0 md:w-[650px] lg:w-[750px] shrink-0 overflow-hidden flex flex-col justify-between border border-[#d6ff00]/20 bg-[#333333]/50">
             <div className="flex-1 flex flex-col items-start justify-start px-10 pt-10 md:pt-20 gap-10 relative">
                 <div className="w-fit relative">
                     <h3 className="text-[29px] sm:text-[45px] font-minima font-bold text-white/90 leading-tight uppercase pl-20 relative">

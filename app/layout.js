@@ -6,6 +6,7 @@ import Lenis from "@studio-freight/lenis";
 import "./globals.css";
 import Footer from "./components/footer/Footer";
 import { useIsMobile } from "./hooks/useIsMobile";
+import WhatsApp from "./elements/WhatsApp";
 
 
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="lenis">
       <body className={`antialiased overflow-x-hidden lg:pb-[60vh] 2xl:pb-[75vh]`}>
         {children}
+        <WhatsApp />
         <Footer />
       </body>
     </html>

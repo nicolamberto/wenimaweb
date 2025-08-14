@@ -24,6 +24,7 @@ export default function CardMobile({ card, i }) {
                     </li>
                 ))}
             </ul>
-            <ButtonCTA text={'CONTACTAR'} className=' w-[65%]'/>
-        </div>)
+            <ButtonCTA text={'CONTACTAR'} className=' w-[65%]' />
+        </div>
+    )
 }

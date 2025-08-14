@@ -12,7 +12,7 @@ export default function ServicesMobile() {
         >
             <div className="inline-flex gap-4 px-4 pb-4">
                 {services.map((card, i) => (
-                    <CardMobile card={card} i={i} />
+                    <CardMobile key={i} card={card} i={i} />
                 ))}
             </div>
         </section>)

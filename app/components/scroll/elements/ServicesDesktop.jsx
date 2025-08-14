@@ -38,7 +38,7 @@ export default function ServicesDesktop() {
             <div className="sticky top-0 h-screen flex items-center overflow-hidden px-0 md:px-4 w-[100vw] py-40">
                 <motion.div style={{ x }} className="flex gap-8">
                     {services.map((card, i) => (
-                        <CardDesktop card={card} key={i} />
+                        <CardDesktop card={card} key={i} i={i} />
                     ))}
                 </motion.div>
             </div>

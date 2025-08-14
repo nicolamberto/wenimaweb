@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image';
 import TypewriterText from '@/app/elements/TypewriterText';
 import ElectricImage from '@/app/elements/ElectricImage';
 

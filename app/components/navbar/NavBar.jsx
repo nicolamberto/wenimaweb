@@ -5,7 +5,6 @@ import ModalMenu from './elements/modal-menu/ModalMenu'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useIsMobile } from '@/app/hooks/useIsMobile'
-import Link from 'next/link'
 export default function NavBar() {
 
     const isMobile = useIsMobile()
@@ -13,7 +12,6 @@ export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [lastScrollY, setLastScrollY] = useState(0)
     const [hasScrolled, setHasScrolled] = useState(false)
-    console.log(isMobile);
 
 
     useEffect(() => {

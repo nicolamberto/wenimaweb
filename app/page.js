@@ -20,13 +20,6 @@ export default function Home() {
         </div>
         <Projects />
         <Contact />
-        {/*        <TypewriterText
-          text="Bienvenidos a mi sitio"
-          typeSpeed={60}  
-          delay={1000}
-          className="text-[40px]"
-          once={true} // o false si querés que se repita al hacer scroll
-        /> */}
       </div>
     </div>
   );

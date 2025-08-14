@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 
 const MotionImage = motion(Image);
 
-
 export const Projects = () => {
 
     return (
