@@ -11,9 +11,9 @@ export const metadata = {
   description:
     "We Nima Estudio crea identidades visuales únicas, webs funcionales y experiencias digitales con creatividad, tecnología y estrategia.",
   openGraph: {
-    title: "We Nima Estudio – Diseño, Branding y Web",
+    title: "We Nima Estudio – Desarrollo, Diseño, Branding y Web",
     description:
-      "Diseño gráfico, branding, desarrollo web y animaciones digitales para potenciar tu presencia online",
+      "Desarrollo web, diseño gráfico, branding y animaciones digitales para potenciar tu presencia online",
     url: "https://wenimaestudio.com/",
     siteName: "We Nima Estudio",
     images: [
