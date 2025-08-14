@@ -18,7 +18,7 @@ export const metadata = {
     siteName: "We Nima Estudio",
     images: [
       {
-        url: "https://wenimaestudio.com/opengraph/graphwenima.png",
+        url: "https://wenimaestudio.com/opengraph/graphwenima.jpg",
         width: 1200,
         height: 630,
         alt: "We Nima Estudio – Soluciones digitales creativas",
