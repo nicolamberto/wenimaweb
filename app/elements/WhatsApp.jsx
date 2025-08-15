@@ -10,7 +10,7 @@ export default function WhatsApp() {
 
   return (
     <motion.a
-      href="https://api.whatsapp.com/send?phone=5493518783602&text=Hola!%20Quiero%20averiguar%20mas%20sobre%20We%20Nima%20!%20"
+      href="https://api.whatsapp.com/send?phone=5493518783602&text=Hola!%20Quiero%20asesorarme%20con%20ustedes!"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 flex items-center justify-center rounded-full shadow-lg z-50 overflow-hidden"
