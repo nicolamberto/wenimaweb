@@ -26,7 +26,7 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon-v2.ico", // favicon en formato webp
+    icon: "https://wenimaestudio.com/favicon-v2.ico", // favicon en formato webp
   },
   twitter: {
     card: "summary_large_image",
