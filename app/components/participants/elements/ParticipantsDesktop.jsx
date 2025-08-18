@@ -20,19 +20,19 @@ export default function ParticipantsDesktop({ participantes }) {
                             onMouseEnter={() => setHoverParticipant(participant)}
                             onMouseLeave={() => setHoverParticipant(false)}
                             className="flex flex-row justify-between items-center pl-10 relative leading-16 2xl:leading-20 z-10">
-                            <div className=" flex flex-row 2xl:gap-20 uppercase justify-center items-center">
+                            <div className="relative flex flex-row 2xl:gap-20 uppercase justify-center items-center px-12 2xl:px-0">
                                 <TypewriterTextHover
                                     text={hoverParticipant.role === participant.role ? participant.role : ''}
                                     typeSpeed={20}
                                     delay={200}
-                                    className="text-black/50 font-poppins-eli 2xl:w-[200px] text-[20px] text-nowrap"
+                                    className=" text-black/50 font-poppins-eli 2xl:w-[200px] text-[12px] 2xl:text-[20px] text-nowrap"
                                     once={false}
                                 />
 
                                 <motion.p
                                     animate={{ x: hoverParticipant && hoverParticipant.name === participant.name ? 50 : 0 }}
                                     transition={{ type: 'tween', duration: 0.25, ease: 'easeOut' }}
-                                    className={`text-[50px] 2xl:text-[70px] font-minima tracking-tighter ${hoverParticipant.name === participant.name ? 'text-[#333333]' : 'text-[#b5b5b5]'} cursor-pointer`}
+                                    className={`text-[25px] xl:text-[45px] 2xl:text-[70px] font-minima tracking-tighter ${hoverParticipant.name === participant.name ? 'text-[#333333]' : 'text-[#b5b5b5]'} cursor-pointer`}
                                 >{participant.name}
                                 </motion.p>
                             </div>
@@ -44,7 +44,7 @@ export default function ParticipantsDesktop({ participantes }) {
 
             </div>
             {hoverParticipant && (
-                <div className="absolute right-10 top-1/2 -translate-y-1/2 z-0 pointer-events-none w-[370px] h-[500px] 2xl:w-[400px] 2xl:h-[500px]">
+                <div className="absolute right-12 2xl:right-10 top-1/2 -translate-y-1/2 z-0 pointer-events-none w-[370px] h-[500px] md:w-[300px] md:h-[400px] 2xl:w-[400px] 2xl:h-[500px]">
                     <Image
                         src={hoverParticipant.image}
                         alt='img'

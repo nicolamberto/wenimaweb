@@ -6,7 +6,7 @@ export default function CardMobile({ card, i }) {
     return (
         <div
             key={i}
-            className="flex-none w-[92vw] h-[520px] border border-[#d6ff00]/20 bg-[#333333]/50 p-6 flex flex-col justify-between py-10"
+            className="flex-none w-[92vw] sm:w-[400px] h-[520px] border border-[#d6ff00]/20 bg-[#333333]/50 p-6 flex flex-col justify-between py-10"
             style={{
                 willChange: 'transform',
                 transform: 'translateZ(0)'
@@ -23,7 +23,7 @@ export default function CardMobile({ card, i }) {
                     </li>
                 ))}
             </ul>
-            <ButtonCTA href='#contacto' text={'CONTACTAR'} className=' w-[65%]' />
+            <ButtonCTA href='#contacto' text={'CONTACTAR'} className=' w-[200px] md:w-[225px]' />
         </div>
     )
 }

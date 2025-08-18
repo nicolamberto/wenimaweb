@@ -28,7 +28,7 @@ export default function ParticipantsMobile({ participantes }) {
                                 text={participant.name}
                                 typeSpeed={30}
                                 delay={1000}
-                                className="font-semibold text-black/60 text-[19px] sm:text-[30px] md:text-[45px] -tracking-[1px] font-minima"
+                                className="font-semibold text-black/60 text-[18px] sm:text-[30px] md:text-[35px] -tracking-[1px] font-minima"
                                 once={true} // o false si querés que se repita al hacer scroll
                             />
 

@@ -26,7 +26,7 @@ export default function ButtonCTA({ text, href = '', className = '' }) {
         return (
             <button
                 onClick={handleClick}
-                className={`rounded-full bg-[#d6ff00] py-1 uppercase font-minima text-[12px] md:text-[20px] text-[#080a00] px-5 flex items-center justify-between ${className}`}
+                className={`rounded-full bg-[#d6ff00] py-1 uppercase font-minima text-[12px] md:text-[16px] 2xl:text-[20px] text-[#080a00] px-5 flex items-center justify-between ${className}`}
             >
                 <motion.span
                     initial={{ x: 15 }}
