@@ -1,4 +1,3 @@
-import NavBar from "./components/navbar/NavBar";
 import Participants from "./components/participants/Participants";
 import Header from "./components/header/Header";
 import TextCarousel from "./components/text-carousel/TextCarousel";
@@ -10,7 +9,6 @@ export default function Home() {
   return (
 
     <div className="flex flex-col justify-start items-center relative z-10 ">
-      <NavBar />
       <Header />
       <div className="bg-[#f1eaf0] bg-[url('/images/bg/bgrugoso.png')] bg-repeat w-full h-full z-0">
         <Participants />

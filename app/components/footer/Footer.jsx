@@ -28,23 +28,37 @@ export default function Footer() {
             <div className="absolute top-0 w-full pl-3 pt-10 gap-5 sm:gap-0 md:p-10 z-50 flex flex-col sm:flex-row justify-around items-start uppercase font-minima  sm:items-center bg-opacity-70  text-white/50">
                 {links.map((link, index) => (
                     <div key={index} className="">
-                        <FlipLink
-                            className='text-[25px] text-white/50'
-                            key={index}
-                            onClick={() => {
-                                setTimeout(() => {
-                                    const section = document.querySelector(link.href);
-                                    if (section) {
-                                        const offset = -0; // por ejemplo, bajar 100px más
-                                        const top = section.getBoundingClientRect().top + window.scrollY + offset;
+                        {
+                            isMobile ? (
+                                <FlipLink
+                                    className='text-[25px] text-white/50'
+                                    key={index}
+                                    onClick={() => {
+                                        setTimeout(() => {
+                                            const section = document.querySelector(link.href);
+                                            if (section) {
+                                                const offset = -0; // por ejemplo, bajar 100px más
+                                                const top = section.getBoundingClientRect().top + window.scrollY + offset;
 
-                                        window.scrollTo({ top, behavior: 'smooth' });
-                                    }
-                                }, 600); // esperar a que termine la animación
-                            }}
-                        >
-                            {link.name}
-                        </FlipLink>
+                                                window.scrollTo({ top, behavior: 'smooth' });
+                                            }
+                                        }, 600); // esperar a que termine la animación
+                                    }}
+                                >
+                                    {link.name}
+                                </FlipLink>
+                            ) : (
+                                <a
+                                    href={link.href}
+                                    className='text-[25px] text-white/50 hover:text-white transition duration-300'
+                                    target={link.target || '_self'}
+                                    rel="noopener noreferrer"
+                                >
+                                    {link.name}
+                                </a>
+                            )
+                        }
+
                     </div>
                 ))}
             </div>
