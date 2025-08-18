@@ -25,7 +25,7 @@ export default function Footer() {
                 height={isMobile ? 150 : 500}
                 className='md:w-[80%] opacity-100 absolute left-1/2 transform -translate-x-1/2 bottom-26 z-10'
             />
-            <div className="absolute top-0 w-full pl-3 pt-10 gap-5 sm:gap-0 md:p-10 z-50 flex flex-col sm:flex-row justify-around items-start uppercase font-minima  sm:items-center bg-opacity-70  text-white/50">
+            <div className="absolute top-0 w-full pl-3 pt-10 gap-1 sm:gap-0 md:p-10 z-50 flex flex-col sm:flex-row justify-around items-start uppercase font-minima  sm:items-center bg-opacity-70  text-white/50">
                 {links.map((link, index) => (
                     <div key={index} className="">
                         {
@@ -50,9 +50,17 @@ export default function Footer() {
                             ) : (
                                 <a
                                     href={link.href}
-                                    className='text-[25px] text-white/50 hover:text-white transition duration-300'
+                                    className='text-[18px]'
                                     target={link.target || '_self'}
                                     rel="noopener noreferrer"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        const target = document.querySelector(link.href);
+                                        if (target) {
+                                            target.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}
+
                                 >
                                     {link.name}
                                 </a>
