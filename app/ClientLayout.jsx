@@ -55,7 +55,7 @@ export default function ClientLayout({ children }) {
             <NavBar />
             {children}
             <WhatsApp />
-            <Footer />
-        </div>
+{/*             <Footer />
+ */}        </div>
     )
 }

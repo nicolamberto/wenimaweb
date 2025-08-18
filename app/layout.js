@@ -40,7 +40,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="lenis">
-      <body className="antialiased overflow-x-hidden lg:pb-[60vh] 2xl:pb-[75vh]">
+      <body className="antialiased   lg:pb-[60vh] 2xl:pb-[75vh]">
         <ClientLayout>
           {children}
         </ClientLayout>
