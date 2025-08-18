@@ -7,6 +7,8 @@ import { useIsMobile } from './hooks/useIsMobile';
 import Lenis from "@studio-freight/lenis";
 import WhatsApp from './elements/WhatsApp';
 import { useScrollToTopOnLoad } from './hooks/useScrollToTopOnLoad';
+
+
 export default function ClientLayout({ children }) {
 
     const isMobile = useIsMobile()
