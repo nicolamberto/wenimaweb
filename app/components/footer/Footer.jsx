@@ -29,7 +29,7 @@ export default function Footer() {
                 {links.map((link, index) => (
                     <div key={index} className="">
                         {
-                            isMobile ? (
+                            !isMobile ? (
                                 <FlipLink
                                     className='text-[25px] text-white/50'
                                     key={index}

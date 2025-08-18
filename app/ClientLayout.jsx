@@ -51,11 +51,11 @@ export default function ClientLayout({ children }) {
     useScrollToTopOnLoad();
 
     return (
-        <div>
+        <div className={`${isMobile ? '' : 'lg:pb-[60vh] 2xl:pb-[75vh]'}`}>
             <NavBar />
             {children}
             <WhatsApp />
-{/*             <Footer />
- */}        </div>
+            <Footer />
+        </div>
     )
 }
