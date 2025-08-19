@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 import React from 'react';
 import { links } from '@/lib/data';
@@ -10,13 +12,13 @@ export default function Footer() {
 
 
     return (
-        <div className={` ${isMobile ? 'block relative' : 'fixed'} bottom-0 w-full h-[50vh] sm:h-[40vh] lg:h-[60vh] 2xl:h-[75vh] bg-[#080a00] z-0 overflow-hidden`}>
+        <div className={` ${isMobile ? 'relative' : 'fixed'} bottom-0 w-full h-[50vh] sm:h-[40vh] lg:h-[60vh] 2xl:h-[75vh] bg-[#080a00] z-0 overflow-hidden`}>
             <Image
                 src={'/images/bg/bgfooter.webp'}
                 alt='logo'
                 width={isMobile ? 400 : 1920}
                 height={isMobile ? 150 : 500}
-                className='h-fit w-[200vw] md:w-full z-0'
+                className='h-fit w-full z-0'
             />
             <Image
                 src={'/images/logos/footer.webp'}
