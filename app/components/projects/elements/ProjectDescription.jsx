@@ -23,9 +23,9 @@ export default function ProjectDescription({ title, description, name, url }) {
                     {description}
                 </p>
             </div>
-            <ButtonCTA href='#contacto' text="Quiero algo así" className='absolute bottom-10 sm:bottom-0 left-3 sm:left-10 md:left-16 2xl:left-auto 2xl:right-20 py-2 2xl:py-4' />
+            <ButtonCTA href='#contacto' text="Quiero algo así" className='absolute bottom-0 sm:bottom-0 left-3 sm:left-10 md:left-16 2xl:left-auto 2xl:right-20 py-2 2xl:py-4' />
 
-            <div className="absolute -bottom-2 md:bottom-0 left-6 sm:left-auto sm:right-10 md:right-20 2xl:left-20">
+            <div className="absolute bottom-12 sm:bottom-0 left-6 sm:left-auto sm:right-10 md:right-20 2xl:right-24 2xl:bottom-20">
                 <motion.a
                     href={url}
                     target="_blank"
